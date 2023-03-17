@@ -1,0 +1,64 @@
+
+/* Titre de la page */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  /* Titres des sections */
+  h2 {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: red;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenu des sections */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Liens hypertextes */
+  a {
+    color: #0072c6;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Encadré pour les CGU et les mentions légales */
+  .legal-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .legal-box h2 {
+    font-size: 24px;
+  }
+  
+  .legal-box h3 {
+    font-size: 18px;
+  }
+  
+  .legal-box p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .tout {
+    /* text-align: center; */
+    width: 800px;
+    margin: 0 auto;
+  }

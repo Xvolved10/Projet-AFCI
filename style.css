@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+
+}
+
+.header-image2 {
+    justify-content: flex-start;
+}
+
+/* #nav{
+text-align: center;
+} */
+.btn-group {
+    background-color: #5AA8B9;
+    /* display: block; */
+
+    text-align: center;
+    /* justify-content: space-between */
+    min-width: 100%;
+    margin-left: 0;
+    /* margin-inline: 25%; */
+
+
+
+
+}
+
+/* .button{
+    text-align: center;
+    
+
+} */
+.body {
+    background-color: #A3B6AB;
+    width: 100%;
+    align-items: flex-start;
+    /* text-align: center; */
+
+
+
+}
+
+.présentation-titre {
+    border-bottom: 3px solid black;
+    /* margin-left: 10%;
+    margin-right: 87%; */
+    /* position: relative;
+    text-align: center; */
+}
+
+.nav {
+    justify-content: space-around;
+}
+
+.paragraphe2 {
+    stroke: black;
+}
+
+.présentation-titre {
+    text-align: center;
+}
+
+/* iframe{
+        position: relative;
+        align-items: center;
+    } */
+.video {
+    position: relative;
+    align-items: center;
+}
+
+.paragraphe1 {
+    font-size: x-large;
+}
+
+.paragraphe2 {
+    font-size: x-large;
+}
+
+strong {
+    text-align: center;
+}
+
+.footer {
+    background-color: #5AA8B9;
+}
+
+/* Début navbar */
+nav {
+    background-color: #ebeff4;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1140px;
+    /* text-decoration: none; */
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.logo {
+    margin-right: auto;
+    /* height: 80px;
+    width: 500px; */
+
+}
+
+.Btnconnexion {
+    margin-left: auto;
+    background-color: #65bdd1;
+    border: solid black 1px;
+    border-radius: 15%;
+}
+
+.btn:hover {
+    background-color: #ffbb00;
+    border-radius: 15%;
+    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 24px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.Navigation:hover {
+    background-color: #5AA8B9;
+    color: #141414;
+    border: solid black 1px;
+}
+
+.Banniere {
+    height: auto;
+    width: 200px;
+}
+
+/* Fin navbar */
+
+/* Début Footer */
+
+footer {
+    background-color: #141414;
+    color: #ffffff;
+    padding: 60px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.logoFooter{
+    margin-right: auto;
+    height: auto;
+    width: 250px;
+    /* height: min-content; */
+    /* width: min-content ; */
+}
+.col-lg-4,
+.col-md-6,
+.col-sm-12,
+.col-md-4 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+ }
+/* .liensutiles {
+    text-align: center;
+} */
+.classLienFooter{
+    margin-left: auto;
+}
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ .a_footer {
+    color: white;
+    text-decoration: none;
+} 
+
+/* footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+  } */
+  footer h3{
+    color: #ffbb00;
+  }
+  footer img {
+    height: 50px;
+    margin-left: 50px;
+    
+  }
+  
+  footer img:first-child {
+    margin-left: 0;
+  }
+  
+  footer a:hover {
+    opacity: 0.8;
+    color: #ffbb00;
+  }
+  
+/* .social{
+    text-align: center;
+} */
+
+/* Fin Footer */
+
+
+
+
+/* @media (max-width:900px) {
+    .btn-group {
+        flex-direction: column;
+        min-width: 65%;
+        max-width: 900px;
+        height: 10%;
+        font-size: large;
+        align-items: flex-start;
+        justify-content: center;
+    }
+} */
+
+/* Pour les écrans de taille moyenne à grande */
+@media (min-width: 768px) {
+    .col-md-6 {
+      width: 50%;
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Pour les écrans de grande taille */
+  @media (min-width: 992px) {
+    .col-lg-4 {
+      width: 33.33%;
+    }
+    .col-lg-4:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+  

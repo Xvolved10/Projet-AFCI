@@ -33,7 +33,10 @@ if(isset($_GET["Accueil"])){
 }else if(isset($_GET["Ashe"])){
   include_once("controllers/ctrl_Ashe.php");
   include_once("views/Ashe.php");
+}else if(isset($_GET["Test"])){
+  include_once("views/Test.php");
 }
+
 
 
 ?>
@@ -75,9 +78,9 @@ if(isset($_GET["Accueil"])){
       <div class="col-md-4" >
         <p>Tous droits réservés</p>
         <div class="row">
-          <a class="social" href="https://www.facebook.com/"><img src="image/Facebook.png" alt="Facebook"></a>
-          <a class="social" href="https://www.twitter.com/"><img src="image/95039-icones-gratuites-des-medias-sociaux-gratuit-vectoriel.png" alt="Twitter"></a>
-          <a class="social" href="https://www.discord.com/"><img src="image/2111363.png" alt="Discord"></a>
+          <a class="social" href="https://www.facebook.com/" target="_blank"><img src="image/Facebook.png" alt="Facebook"></a>
+          <a class="social" href="https://www.twitter.com/" target="_blank"><img src="image/95039-icones-gratuites-des-medias-sociaux-gratuit-vectoriel.png" alt="Twitter"></a>
+          <a class="social" href="https://www.discord.com/" target="_blank"><img src="image/2111363.png" alt="Discord"></a>
         </div>
       </div>
     </div>

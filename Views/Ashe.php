@@ -8,15 +8,18 @@
 
 
 
-    </nav>
     <!-- Présentation -->
     <section class="présentation">
         <div class="container-fluid  ">
-            <img class="img_background" src="image/1600_Ashe.jpg" class="img-thumbnail" alt="Ashe">
-
+            <img class="img_background" src="image/1600_Ashe.jpg"  alt="Ashe">
+            <div>
             <h1 class="présentation-titre ">Ashe</h1>
+            <h4 class="description">Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</h4>
+            
+            <h4 class="position">Gorge Deadlock, Arizona, États-Unis</h4>
+        </div>
 
-            <br><br><br><br><br><br>
+
         </div>
 
 
@@ -42,7 +45,7 @@
             </div>
 
             <!-- Les origines -->
-            <div class="">
+            <div class="Origines_text">
                 <h1 class="Origines">Les origines</h1>
                 <br><br>
                 <p class="paragraphe2 ">
@@ -65,7 +68,7 @@
     </section>
     <!-- Vidéos -->
     <section>
-        <div class=" container-fluid md-6 sm-12">
+        <div class=" container-fluid md-6 col-sm-12">
             <div>
                 <iframe src="https://www.youtube.com/embed/-dN6l7KF_Tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

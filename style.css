@@ -5,11 +5,11 @@
 
 }
 
-.header-image2 {
+/* .header-image2 {
     justify-content: flex-start;
-}
+} */
 
-.btn-group {
+/* .btn-group {
     background-color: #5AA8B9;
 
     text-align: center;
@@ -19,9 +19,10 @@
 
 
 
-}
+} */
 
-.body {
+/* Body  */
+body {
     background-color: #a3b2b6;
     width: 100%;
     align-items: flex-start;
@@ -39,13 +40,25 @@
     
     color: white;
 }
-h4{
+body h4{
     color: white;
 }
-
+.Origines_text {
+    color: blue;
+    font-weight: bold;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+.Origines{
+    font-size: 3rem;
+    /* border-bottom: 2px solid black; */
+    font-style: italic;
+}
 .paragraphe2 {
     stroke: black;
     font-size: x-large;
+
 }
 
 
@@ -54,7 +67,7 @@ h4{
 }
 
 
-strong {
+body strong {
     text-align: center;
 }
 
@@ -91,7 +104,7 @@ nav {
     max-width: 1140px;
 }
 
-li {
+nav li {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -123,7 +136,7 @@ li {
     border-radius: 15%;
 }
 
-a {
+nav a {
     color: black;
     text-decoration: none;
     padding: 24px;
@@ -192,21 +205,26 @@ footer {
     
 }
 
-h3 {
+footer h3 {
     font-size: 24px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-p {
+footer p {
     margin-bottom: 20px;
 }
 
-ul {
+footer ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1140px; 
+
 }
 
 .a_footer {
@@ -239,8 +257,56 @@ footer a:hover {
 
 /* Début Page Personnage */
 
+.image-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-text .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding-left: 5%;
 
-iframe {
+  }
+  
+  .image-text:hover .overlay {
+    opacity: 1;
+  }
+  
+  .image-text .overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffbb00;
+  }
+  
+  .image-text .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .image-text .overlay .icones img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  .icones{
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+body iframe {
     width: 40%;
     height: 18em;
     margin-left: 5%;

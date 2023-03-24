@@ -1,69 +1,75 @@
 <body class="body">
-    <!-- Header -->
+    <!-- Header
     <header class="header padding-top-bottom">
         <div class="container-fluid">
             <img class="header-image1 img-fluid" src="image/Banniere.png" alt="image-tête"><br>
         </div>
-    </header>
+    </header> -->
 
 
 
     <!-- Présentation -->
     <section class="présentation">
-        <div class="container-fluid  ">
-            <img class="img_background" src="image/1600_Ashe.jpg"  alt="Ashe">
-            <div>
-            <h1 class="présentation-titre ">Ashe</h1>
-            <h4 class="description">Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</h4>
-            
-            <h4 class="position">Gorge Deadlock, Arizona, États-Unis</h4>
+        <div class="image-text">
+            <img class="img_background" src="image/1600_Ashe.jpg" alt="Ashe">
+            <div class="overlay">
+                <h1>Ashe</h1>
+                <p>Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</p>
+                <div class="icones">
+                    <img src="image/1563473137_837161.png">
+                    <p>Dégats</p>
+                    <img src="image/227.jpg">
+                    <p>Gorge Deadlock, Arizona, États-Unis</p>
+                </div>
+            </div>
         </div>
 
-
-        </div>
 
 
     </section>
-    <!-- Histoire -->
+    <!-- Textes -->
     <section class="Paragraphes">
         <div class="container-fluid row col-sm-12 col-lg-6  text-left  px-5 mt-3 ">
-            <h1 class="Histoire">Histoire</h1>
-            <br><br><br>
-            <div class=" ">
-                <p class="paragraphe1">
-                    À la tête du gang Deadlock,<br>
-                    Ashe est une personnalité <br>
-                    respectée dans le milieu de la pègre<br>
-                    qui suit ses propres règles<br>
-                    sur le champ de bataille.<br>
-                    Elle ne manque pas de puissance de feu,<br>
-                    entre ses deux armes, <br>
-                    ses réserves de dynamite et son<br>
-                    fidèle majordome, Bob.
-                    <br><br><br>
-                </p>
-            </div>
-
             <!-- Les origines -->
             <div class="Origines_text">
                 <h1 class="Origines">Les origines</h1>
                 <br><br>
                 <p class="paragraphe2 ">
-                    Ashe est la fille d’un couple fortuné<br>
-                    qui s’intéressait davantage<br>
-                    à ses affaires qu’à sa fille.<br>
-                    Ambitieuse et calculatrice,<br>
-                    elle s’est rebellée et a formé<br>
-                    le gang Deadlock,<br>
-                    qui s’est rapidement fait connaître<br>
-                    dans le monde de la pègre.<br>
-                    Après avoir convaincu les bandes<br>
-                    du Sud-Ouest américain de s’associer,<br>
-                    Ashe s’est forgé une légende<br>
-                    et a rendu sa notoriété au Far West<br>
+                    Ashe est la fille d’un couple fortuné
+                    qui s’intéressait davantage
+                    à ses affaires qu’à sa fille.
+                    Ambitieuse et calculatrice,
+                    elle s’est rebellée et a formé
+                    le gang Deadlock,
+                    qui s’est rapidement fait connaître
+                    dans le monde de la pègre.
+                    Après avoir convaincu les bandes
+                    du Sud-Ouest américain de s’associer,
+                    Ashe s’est forgé une légende
+                    et a rendu sa notoriété au Far West
                     d’antan.
                 </p>
             </div>
+            <!-- Histoire -->
+            <div>
+                <h1 class="Histoire">Histoire</h1>
+                <br><br><br>
+                <div class=" ">
+                    <p class="paragraphe1">
+                        À la tête du gang Deadlock,<br>
+                        Ashe est une personnalité <br>
+                        respectée dans le milieu de la pègre<br>
+                        qui suit ses propres règles<br>
+                        sur le champ de bataille.<br>
+                        Elle ne manque pas de puissance de feu,<br>
+                        entre ses deux armes, <br>
+                        ses réserves de dynamite et son<br>
+                        fidèle majordome, Bob.
+                        <br><br><br>
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- Vidéos -->

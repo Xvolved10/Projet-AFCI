@@ -2,16 +2,6 @@
     position: relative;
     display: inline-block;
   }
-  /* .img_background{
-    width: 100%;
-    height: 400em;
-  } */
-/*   
-  .image-text img {
-    width: 100%;
-    height: auto;
-    display: block;
-  } */
   
   .image-text .overlay {
     position: absolute;
@@ -22,8 +12,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* margin-left: 5%; */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     opacity: 0;
@@ -57,7 +45,6 @@
     text-align: left;
     justify-content: center;
     align-items: center;
-    /* padding-left: 5%; */
 
   }
 

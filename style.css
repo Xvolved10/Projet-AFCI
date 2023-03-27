@@ -23,28 +23,18 @@
 
 /* Body  */
 body {
-    background-color: #a3b2b6;
+    background-color: #7183bb;
     width: 100%;
     align-items: flex-start;
   
 }
-.présentation{
-    width: auto;
-    display: flex;
-    align-items: center;
-}
-.présentation-titre {
-    /* border-bottom: 3px solid black; */
-    text-align: center; 
-    /* margin-bottom: 5em; */
-    
-    color: white;
-}
+
+
 body h4{
     color: white;
 }
 .Origines_text {
-    color: blue;
+    color: white;
     font-weight: bold;
     /* justify-content: center;
     align-items: center;
@@ -54,10 +44,17 @@ body h4{
     font-size: 3rem;
     /* border-bottom: 2px solid black; */
     font-style: italic;
+    margin-bottom: 1em;
+
+    /* text-align: center; */
+}
+.Origine_video{
+    width: 90%;
 }
 .paragraphe2 {
     stroke: black;
     font-size: x-large;
+    margin-bottom: 2em;
 
 }
 
@@ -86,11 +83,12 @@ nav {
     margin-left: 3%;
     margin-right: 3%;
     width: 94%;
-    border-top-left-radius:5% ;
-    border-top-right-radius:5% ;
-    border-bottom-right-radius:5% ;
-    border-bottom-left-radius:5% ;
+    border-radius: 1em;
     z-index: 2;
+    opacity: 0.7;
+}
+nav:hover{
+    opacity: 1.0;
 }
 
 .ul_nav {
@@ -170,13 +168,10 @@ footer {
     font-size: 18px;
     line-height: 1.5;
     
+    
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 ;
-    padding: 0 15px;
-}
+/*  */
 
 .row {
     display: flex;
@@ -239,18 +234,23 @@ footer h3 {
 footer img {
     height: 50px;
     margin-left: 50px;
+    margin-bottom: 1em;
+    /* margin-inline: 10em; */
 
 }
+
 
 footer img:first-child {
     margin-left: 0;
 }
 
 footer a:hover {
-    opacity: 0.8;
-    color: #ffbb00;
+color: #ffbb00;
 }
+footer img:hover{
+    opacity: 0.8;
 
+}
 
 /* Fin Footer */
 
@@ -308,10 +308,11 @@ footer a:hover {
 
 body iframe {
     width: 40%;
-    height: 18em;
+    height: 20em;
     margin-left: 5%;
     margin-right: 4%;
     margin-bottom: 5%;
+    border: #141414 solid 5px;
 
 }
 .img_background{
@@ -320,7 +321,9 @@ height: 40em;
 max-width: 100%;
 max-height: auto;
 }
-
+.card-image{
+    border: #000000 solid 3px;
+}
 
 
 

@@ -77,7 +77,7 @@ if(isset($_GET["Accueil"])){
       </div>
       <div class="col-md-4" >
         <p>Tous droits réservés</p>
-        <div class="row">
+        <div class="row socials">
           <a class="social" href="https://www.facebook.com/" target="_blank"><img src="image/Facebook.png" alt="Facebook"></a>
           <a class="social" href="https://www.twitter.com/" target="_blank"><img src="image/95039-icones-gratuites-des-medias-sociaux-gratuit-vectoriel.png" alt="Twitter"></a>
           <a class="social" href="https://www.discord.com/" target="_blank"><img src="image/2111363.png" alt="Discord"></a>

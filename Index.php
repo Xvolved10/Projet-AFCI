@@ -30,10 +30,10 @@ include_once("models/Database.php");
 if(isset($_GET["Accueil"])){
     include_once("Controllers/ctrl_Accueil.php");
     include_once("Views/Accueil.php");
-}else if(isset($_GET["Ashe"])){
+}elseif(isset($_GET["Ashe"])){
   include_once("controllers/ctrl_Ashe.php");
   include_once("views/Ashe.php");
-}else if(isset($_GET["Test"])){
+}elseif(isset($_GET["Test"])){
   include_once("views/Test.php");
 }
 
@@ -91,6 +91,6 @@ if(isset($_GET["Accueil"])){
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    <link href="style.css" rel="stylesheet">
-
     </body>
+    <script type="text/javascript" src="script.js"></script>
 </html>    

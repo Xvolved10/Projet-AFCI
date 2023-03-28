@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+cursor: pointer;
 }
 
 /* .header-image2 {
@@ -53,15 +53,15 @@ body h4{
 }
 .paragraphe2 {
     stroke: black;
-    font-size: x-large;
+    font-size: 1.5rem;
     margin-bottom: 2em;
 
 }
 
 
-.paragraphe1 {
-    font-size: x-large;
-}
+/* .paragraphe1 {
+    font-size: 2rem;
+} */
 
 
 body strong {
@@ -258,8 +258,7 @@ footer img:hover{
 /* Début Page Personnage */
 
 .image-text {
-    position: relative;
-    display: inline-block;
+  margin-bottom: 3rem;
   }
   
   .image-text .overlay {
@@ -271,7 +270,7 @@ footer img:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     color: white;
     opacity: 0;
     transition: opacity 0.5s;
@@ -326,6 +325,95 @@ max-height: auto;
 }
 
 
+
+
+/* Bouton Accordéon Histoire */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .accordion {
+    /* color: white; */
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-style: italic;
+    /* font-weight: bold; */
+    background-color: none;
+  }
+  
+  /* .accordion:hover {
+    background-color: #ccc;
+  } */
+  .Histoire{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ebeff4;
+    stroke: black;
+  }
+  .panel {
+    padding: 0 18px;
+    /* background-color: white; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .panel p {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .active, .active i.arrow {
+    color: #ffbb00;
+    }
+    
+    .active i.arrow {
+    transform: rotate(180deg);
+    }
+    
+    .arrow {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    .show {
+    max-height: 100%;
+    }
+    
+    @media (min-width: 768px) {
+    .accordion-container {
+    max-width: 600px;
+    }
+    }
+    
+    @media (min-width: 1024px) {
+    .accordion-container {
+    max-width: 800px;
+    }
+    }
+      /* Fin Bouton Accordéon Histoire */
+
+/* Bd Personnage */
+
+.bd{
+
+}
 
 
 

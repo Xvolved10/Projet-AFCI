@@ -53,13 +53,13 @@
             <iframe class="Origine_video" src="https://www.youtube.com/embed/-dN6l7KF_Tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <!-- Histoire -->
             <div class="accordion-container">
-                <button class="accordion active"><h1>Jeunesse</h1><i class="arrow down"></i></button>
-                <div class="panel show">
+                <button id="jeunesse-button" class="accordion  title"><h1 >Jeunesse</h1><i class="arrow down"></i></button>
+                <div id="jeunesse-panel" class="panel show">
                     <p class="Histoire">Issue d’une famille aisée, Ashe grandit dans un milieu privilégié. Ses parents étaient les propriétaires d’Arbalest Arms Company, une entreprise familiale qui avait pris de l’envergure lors de la crise des Omniums. Malgré leur intérêt limité pour l’armement et la technologie, ils n’en étaient pas moins devenus des consultants en affaire très demandés et qui coachaient même l’élite mondiale. S’ils ne prêtaient que peu d’attention à leur fille (et la confiaient souvent aux soins du majordome omniaque de la famille, B.O.B.), ils s’étaient assurés qu’elle ait toutes les chances de réussir. Mais une rencontre fortuite avec un voyou du coin du nom de Cole Cassidy et la série de crimes qu’ils commirent ensemble lui ouvrirent les yeux quant à sa véritable vocation. La satisfaction de se montrer plus maligne que ses cibles ainsi que le frisson de la réussite avaient fait d’elle une hors-la-loi.
                     </p>
                 </div>
-                <button class="accordion"><h1>Deadlock Rebel</h1><i class="arrow down"></i></button>
-                <div class="panel">
+                <button id="deadlock-button" class="accordion title"><h1 >Deadlock Rebel</h1><i class="arrow down"></i></button>
+                <div id="deadlock-panel" class="panel">
                     <p class="Histoire">Aux côtés des trois autres fondateurs du gang Deadlock Rebels, Ashe se fit un nom en réussissant des casses plus importants et impressionnants. Ses « exploits » finirent par lui valoir l’attention d’Overwatch, qui s’opposa vite à la bande et emprisonna Cassidy. Mais en se hissant ainsi au premier plan, le gang ne s’attira pas seulement les foudres de la loi : les autres organisations criminelles du Sud-Ouest américain voulaient elles aussi leur part du gâteau, et les accrochages étaient souvent violents. Après des années d’échauffourées et de bains de sang, Ashe organisa une rencontre avec les chefs des autres groupes principaux.
                         Elle avait tout à gagner à ce que leur influence grandisse, aussi utilisa-t-elle ce qu’elle avait appris auprès de ses parents pour organiser les différents gangs. Elle leur proposa de travailler ensemble, ou tout du moins, d’arrêter de se tirer dans les pattes. À présent soulagée de ses chamailleries avec les autres gangs, Ashe se fit connaître dans tout le Sud-Ouest américain en enchaînant attaques et hold-up audacieux, obtenant ainsi le statut de hors-la-loi légendaire.
                         Ses principes étaient les suivants : tenez parole, ne collaborez pas avec les autorités, respectez le territoire des autres, et soyez sans pitié envers les traîtres. D’ailleurs, bien des années après que Cole Cassidy les eut trahis pour rejoindre Overwatch, les Deadlock Rebels reçurent un tuyau : une technologie de très grande valeur allait traverser leur territoire en hypertrain. Incapable d’ignorer une opportunité aussi lucrative, le gang projeta de le braquer, avant de comprendre qu’il était la véritable victime de ce coup. Cassidy neutralisa tous ses membres et libéra Écho. À lui tout seul, il venait de priver Ashe de sa moto, de son butin, et de sa chance de se venger.
@@ -78,12 +78,12 @@
 
                 <iframe src="https://www.youtube.com/embed/Iw3gLTeC9e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-                <strong>------------------------------</strong>
+                <strong>----------------------------</strong>
             </div>
     </section>
-    <section class="section_bd col-md-12 col-sm-12 col-lg-12 ">
+    <section class="section_bd" >
         <!-- FINIR ICI  -->
-        <img class="bd" src="image/AsheBd.png" alt="AsheBd">
+        <a class="bd_link" href="https://overwatch.blizzard.com/fr-fr/media/stories/deadlock-rebels-chapter-1/" target="_blank" ><img class="bd" src="image/AsheBd.png" alt="AsheBd"></a>
     </section>
     <!-- Images -->
     <section class="images">

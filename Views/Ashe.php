@@ -53,7 +53,7 @@
             <iframe class="Origine_video" src="https://www.youtube.com/embed/-dN6l7KF_Tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <!-- Histoire -->
             <div class="accordion-container">
-                <button id="jeunesse-button" class="accordion  title"><h1 >Jeunesse</h1><i class="arrow down"></i></button>
+                <button id="jeunesse-button" class="accordion active title"><h1 >Jeunesse</h1><i class="arrow down"></i></button>
                 <div id="jeunesse-panel" class="panel show">
                     <p class="Histoire">Issue d’une famille aisée, Ashe grandit dans un milieu privilégié. Ses parents étaient les propriétaires d’Arbalest Arms Company, une entreprise familiale qui avait pris de l’envergure lors de la crise des Omniums. Malgré leur intérêt limité pour l’armement et la technologie, ils n’en étaient pas moins devenus des consultants en affaire très demandés et qui coachaient même l’élite mondiale. S’ils ne prêtaient que peu d’attention à leur fille (et la confiaient souvent aux soins du majordome omniaque de la famille, B.O.B.), ils s’étaient assurés qu’elle ait toutes les chances de réussir. Mais une rencontre fortuite avec un voyou du coin du nom de Cole Cassidy et la série de crimes qu’ils commirent ensemble lui ouvrirent les yeux quant à sa véritable vocation. La satisfaction de se montrer plus maligne que ses cibles ainsi que le frisson de la réussite avaient fait d’elle une hors-la-loi.
                     </p>
@@ -88,7 +88,7 @@
     <!-- Images -->
     <section class="images">
         <div class="container">
-            <div class="row justify-content-center align-items-center mt-5 ">
+            <div class="row justify-content-center align-items-center mt-5 section_images">
                 <div class="col-sm-12 col-md-6 col-lg-4 mb-4 ">
                     <div class="card-image ">
                         <img class="img-fluid" src="image/ashe-screenshot-001.1920.jpg" alt="Ashe-1">

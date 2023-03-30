@@ -999,6 +999,14 @@
 
 
 
+
+
+
+
+
+
+
+
 const accordionButtons = document.querySelectorAll(".accordion");
 const navbarHeight = document.querySelector("nav").offsetHeight;
 
@@ -1046,3 +1054,188 @@ function toggleAccordion() {
 accordionButtons.forEach((button) => {
   button.addEventListener("click", toggleAccordion);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const accordionButtons = document.querySelectorAll(".accordion");
+// const navbarHeight = document.querySelector("nav").offsetHeight;
+
+// function scrollTo(element) {
+//   window.scroll({
+//     behavior: "smooth",
+//     left: 0,
+//     top: element.offsetTop - navbarHeight,
+//   });
+// }
+
+// function toggleAccordion() {
+//   const accordionPanel = this.nextElementSibling;
+
+//   if (this.classList.contains("active")) {
+//     // close the clicked accordion panel
+//     accordionPanel.style.maxHeight = null;
+//     this.classList.remove("active");
+//   } else {
+//     // close any other active accordion panels
+//     accordionButtons.forEach((button) => {
+//       if (button.classList.contains("active")) {
+//         button.classList.remove("active");
+//         button.nextElementSibling.style.maxHeight = null;
+//       }
+//     });
+
+//     // open the clicked accordion panel
+//     if (accordionPanel.scrollHeight !== 0) {
+//       accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+//       this.classList.add("active");
+
+//       // scroll to the opened accordion panel
+//       scrollTo(accordionPanel);
+//     }
+//   }
+// }
+
+// accordionButtons.forEach((button) => {
+//   button.addEventListener("click", toggleAccordion);
+// });
+
+
+
+
+
+
+// const accordionButtons = document.querySelectorAll(".accordion");
+// const navbarHeight = document.querySelector("nav").offsetHeight;
+
+// function scrollTo(element) {
+//   window.scroll({
+//     behavior: "smooth",
+//     left: 0,
+//     top: element.offsetTop - navbarHeight,
+//   });
+// }
+
+// function toggleAccordion() {
+//   const accordionPanel = this.nextElementSibling;
+
+//   if (this.classList.contains("active")) {
+//     // close the clicked accordion panel
+//     accordionPanel.style.maxHeight = null;
+//     this.classList.remove("active");
+//     return; // Return early if clicked accordion is already closed
+//   }
+
+//   // close any other active accordion panels
+//   accordionButtons.forEach((button) => {
+//     button.classList.remove("active");
+//     button.nextElementSibling.style.maxHeight = null;
+//   });
+
+//   // open the clicked accordion panel
+//   accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+//   this.classList.add("active");
+
+//   // scroll to the opened accordion panel
+//   scrollTo(accordionPanel);
+// }
+
+// accordionButtons.forEach((button) => {
+//   button.addEventListener("click", toggleAccordion);
+//   button.nextElementSibling.classList.add("show");
+// });
+
+// // Close all accordions except the one clicked
+// function closeAllAccordions(exceptAccordion) {
+//   accordionButtons.forEach((button) => {
+//     if (button !== exceptAccordion) {
+//       button.classList.remove("active");
+//       button.nextElementSibling.style.maxHeight = null;
+//     }
+//   });
+// }
+
+// // Add click event listener to each accordion button
+// accordionButtons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     // Close all other accordions except the one clicked
+//     closeAllAccordions(button);
+//     // Show/hide the accordion content
+//     button.nextElementSibling.classList.toggle("show");
+//   });
+// });
+
+
+
+
+
+
+
+
+// const accordionButtons = document.querySelectorAll(".accordion");
+// const navbarHeight = document.querySelector("nav").offsetHeight;
+
+// function scrollTo(element) {
+//   window.scroll({
+//     behavior: "smooth",
+//     left: 0,
+//     top: element.offsetTop - navbarHeight,
+//   });
+// }
+
+// function toggleAccordion() {
+//   const accordionPanel = this.nextElementSibling;
+
+//   if (this.classList.contains("active")) {
+//     // close the clicked accordion panel
+//     accordionPanel.style.maxHeight = null;
+//     this.classList.remove("active");
+//   } else {
+//     // close any other active accordion panels
+//     accordionButtons.forEach((button) => {
+//       button.classList.remove("active");
+//       button.nextElementSibling.style.maxHeight = null;
+//     });
+
+//     // open the clicked accordion panel
+//     accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+//     this.classList.add("active");
+
+//     // scroll to the opened accordion panel
+//     scrollTo(accordionPanel);
+//   }
+  
+//   // check if the clicked button is the only one open
+//   const openAccordions = document.querySelectorAll(".accordion.active");
+//   if (openAccordions.length === 1) {
+//     this.nextElementSibling.classList.add("show");
+//   } else {
+//     this.nextElementSibling.classList.remove("show");
+//   }
+// }
+
+// accordionButtons.forEach((button, index) => {
+//   if (index === 0) {
+//     // add "active" class to first accordion button
+//     button.classList.add("active");
+    
+//     // set the max-height of the first accordion panel to its actual height
+//     button.nextElementSibling.style.maxHeight = button.nextElementSibling.scrollHeight + "px";
+//   }
+  
+//   button.addEventListener("click", toggleAccordion);
+// });
+
+
+
+

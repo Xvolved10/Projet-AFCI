@@ -6,7 +6,7 @@
 }
 
 .header-image2 {
-    width: 100%;
+    width: auto;
 }
 
 
@@ -16,7 +16,7 @@ body {
     background-color: #7183bb;
     width: 100%;
     align-items: flex-start;
-  
+    /* overflow-x: auto; */
 }
 
 
@@ -111,7 +111,7 @@ nav li {
     margin-left: auto;
     background-color: #65bdd1;
     border: solid black 1px;
-    border-radius: 15%;
+    border-radius: 1em;
     height: auto;
 
 
@@ -119,13 +119,14 @@ nav li {
 
 .btn:hover {
     background-color: #ffbb00;
+    border-radius: 1em;
 
 
 }
 
 .Btnconnexion:hover {
     background-color: #ffbb00;
-    border-radius: 15%;
+    border-radius: 1em;
 }
 
 nav a {
@@ -147,8 +148,8 @@ nav a {
 }
 
 .Banniere {
-    height: auto;
     width: 200px;
+    height: auto;
 }
 
 /* Fin navbar */
@@ -167,7 +168,7 @@ footer {
 
 /*  */
 
-.row {
+.section_images {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
@@ -427,20 +428,112 @@ max-width: 100%;
     margin-left: 0;
     border: solid black 1px;
     border-radius: 1em;
-
+margin-bottom: 2em;
 }
 .btn{
+  /* background-color: #5AA8B9; */
+
     font-size: 1.5em;
     font-weight: 500;
     
 }
+
+
+/* Section Personnage Page d'accueil*/
+.character {
+  /* margin-top: 5em; */
+  text-align: center;
+  width: 100%;
+  border: solid black 2px;
+  /* margin-inline: 0; */
+}
+
+/* .character_Home{
+margin: 0;
+} */
+
+.image-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.name-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(65, 65, 65);
+  color: #ffffff;
+  /* font-weight: 900;
+  font-weight: bold; */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-container h2 {
+  font-size: 1.3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.character a:hover .name-container h2 {
+  color: #ffbb00;
+}
+
+
+@media screen and (min-width: 576px) {
+  .character {
+    flex-basis: calc(50% - 40px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .character {
+    flex-basis: calc(33.33% - 40px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .character {
+    flex-basis: calc(25% - 40px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .container {
     max-width: 1200px;
     margin: 0 auto;
   } */
   
-  .row {
+  /* .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -449,11 +542,12 @@ max-width: 100%;
   .character {
     margin: 20px;
     text-align: center;
+    width: 40%;
   }
   
-  .image {
-    width: 200px;
-    height: 200px;
+  .image_Accueil {
+    width: 10%;
+    height: 10px;
     margin: 0 auto;
     background-color: #ccc;
     display: flex;
@@ -462,8 +556,8 @@ max-width: 100%;
   }
   
   .image img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 40%;
+    max-height: 20em;
   }
   
   .name {
@@ -497,7 +591,7 @@ max-width: 100%;
     .character {
       flex-basis: calc(25% - 40px);
     }
-  }
+  } */
   
 
 

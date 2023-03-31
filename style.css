@@ -152,6 +152,14 @@ nav a {
     height: auto;
 }
 
+
+
+/* Assombrir la Navbar sur une image trop claire
+.dark-nav {
+  background-color: #333;
+  opacity: 0.9;
+} */
+
 /* Fin navbar */
 
 /* Début Footer */
@@ -439,6 +447,9 @@ margin-bottom: 2em;
 }
 
 
+
+
+
 /* Section Personnage Page d'accueil*/
 .character {
   /* margin-top: 5em; */
@@ -514,7 +525,11 @@ margin: 0;
 
 
 
+/* Css cartes */
 
+.header-image-cartes{
+  width: 100%;
+}
 
 
 

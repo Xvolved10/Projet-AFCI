@@ -19,8 +19,8 @@ include_once("models/Database.php");
 
 <body>
   <!-- Navbar -->
-  <nav>
-    <ul class="ul_nav">
+  <nav id="nav">
+    <ul class="ul_nav" >
       <li class="logoBanniere"><a href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="#">Héros</a></li>
       <li><a class="Navigation" href="#">Cartes</a></li>
@@ -30,19 +30,32 @@ include_once("models/Database.php");
   </nav>
 
   <?php
-  if (isset($_GET["Accueil"])) {
-    include_once("Controllers/ctrl_Accueil.php");
-    include_once("Views/Accueil.php");
+  if (isset($_GET["Héros"])) {
+    include_once("Controllers/ctrl_Héros.php");
+    include_once("Views/Héros.php");
   } elseif (isset($_GET["Ashe"])) {
     include_once("controllers/ctrl_Ashe.php");
     include_once("views/Ashe.php");
-  } elseif (isset($_GET["Test"])) {
-    include_once("views/Test.php");
+  }
+  // elseif (isset($_GET["Test"])) {
+  //   include_once("views/Test.php");
+  // } 
+  elseif (isset($_GET["Cartes"])) {
+    include_once("views/Cartes.php");
   }
 
 
 
   ?>
+
+    <!-- Banniere bas de page -->
+    <section>
+        <div>
+            <img class="header-image img-fluid" src="image/thumb_4905_post_big.jpg" alt="Ow-">
+
+        </div>
+
+    </section>
 
   <!-- Création Footer -->
   <footer class="container-fluid">

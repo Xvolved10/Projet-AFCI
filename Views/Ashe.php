@@ -123,11 +123,3 @@
             </div>
         </div>
     </section>
-    <!-- Banniere bas de page -->
-    <section>
-        <div>
-            <img class="header-image img-fluid" src="image/thumb_4905_post_big.jpg" alt="Ow-">
-
-        </div>
-
-    </section>

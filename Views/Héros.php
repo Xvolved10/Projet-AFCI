@@ -1,28 +1,10 @@
-<!-- <script>
-  // Carrousel Accueil JQUERY
-
-  // Configurer l'intervalle de temps de 5 secondes pour le défilement automatique
-  $('.carousel').carousel({
-    interval: 5000
-  });
-
-  // Ajouter la fonctionnalité de défilement manuel
-  $('.carousel-control-prev').click(function() {
-    $('#myCarousel').carousel('prev');
-  });
-
-  $('.carousel-control-next').click(function() {
-    $('#myCarousel').carousel('next');
-  });
-</script> -->
 
 <body class="body">
   <!-- <section>
     <div class="container-fluid">
       <img class="header-image2 img-fluid" src="image/ow-heroes.png" alt="OW_heroes">
     </div>
-  </section>
-  <section> -->
+  </section> -->
 
 
 
@@ -77,7 +59,6 @@
 
     </div>
   </section>
-  <!-- Section Personnage -->
 
 
   <!-- Section Personnage -->

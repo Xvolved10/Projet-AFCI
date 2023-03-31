@@ -1239,3 +1239,50 @@ accordionButtons.forEach((button) => {
 
 
 
+
+
+// // Code pour assombrir la navbar
+// var img = document.getElementById("image-id");
+// var canvas = document.createElement("canvas");
+// canvas.width = img.width;
+// canvas.height = img.height;
+// var context = canvas.getContext("2d");
+// context.drawImage(img, 0, 0);
+// var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+// var data = imageData.data;
+// var r = 0, g = 0, b = 0;
+// for (var i = 0; i < data.length; i += 4) {
+//   r += data[i];
+//   g += data[i + 1];
+//   b += data[i + 2];
+// }
+// r /= (data.length / 4);
+// g /= (data.length / 4);
+// b /= (data.length / 4);
+// var brightness = (r + g + b) / 3;
+// var navbar = document.querySelector("nav");
+// if (brightness < 128) {
+//   navbar.classList.add("dark-nav");
+// } else {
+//   navbar.classList.remove("dark-nav");
+// }
+
+
+
+
+
+// Carrousel Accueil JQUERY
+
+  // Configurer l'intervalle de temps de 5 secondes pour le défilement automatique
+  $('.carousel').carousel({
+    interval: 5000
+  });
+
+  // Ajouter la fonctionnalité de défilement manuel
+  $('.carousel-control-prev').click(function() {
+    $('#myCarousel').carousel('prev');
+  });
+
+  $('.carousel-control-next').click(function() {
+    $('#myCarousel').carousel('next');
+  });

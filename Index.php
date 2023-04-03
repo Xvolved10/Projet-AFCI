@@ -21,7 +21,7 @@ include_once("models/Database.php");
   <!-- Navbar -->
   <nav id="nav">
     <ul class="ul_nav" >
-      <li class="logoBanniere"><a href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
+      <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="#">Héros</a></li>
       <li><a class="Navigation" href="#">Cartes</a></li>
       <li><a class="Navigation" href="#">Forums</a></li>
@@ -34,18 +34,15 @@ include_once("models/Database.php");
     include_once("Controllers/ctrl_Héros.php");
     include_once("Views/Héros.php");
   } elseif (isset($_GET["Ashe"])) {
-    include_once("controllers/ctrl_Ashe.php");
     include_once("views/Ashe.php");
-  }
-  // elseif (isset($_GET["Test"])) {
-  //   include_once("views/Test.php");
-  // } 
-  elseif (isset($_GET["Cartes"])) {
+  } elseif (isset($_GET["Cartes"])) {
     include_once("views/Cartes.php");
   }
 
 
-
+// elseif (isset($_GET["Test"])) {
+  //   include_once("views/Test.php");
+  // } 
   ?>
 
     <!-- Banniere bas de page -->

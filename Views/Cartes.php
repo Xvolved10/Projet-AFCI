@@ -128,7 +128,7 @@
                 <a class="link_maps" href="http://localhost/PHP/Evaluation/Index.php?Hanamura#">
                     <img class="image_Cartes" src="image/Cartes/Hanamura/Hanamura_001.jpg">
                     <div class="maps_names">
-                        <h2>Hanamura</h2>
+                        <h2 >Hanamura</h2>
                     </div>
                 </a>
             </div>

@@ -20,5 +20,39 @@
   </div>
 </div>
 
+<section class="row">
+  <h1>Personnages liés</h1>
+<div class="link-container">
+  <div class="placeholder-container">
+    <div class="placeholder-circle"></div>
+  </div>
+</div>
+<div class="link-container">
+  <div class="placeholder-container">
+    <div class="placeholder-circle"></div>
+    </div>
+</div>
+<div class="link-container">
+  <div class="placeholder-container">
+    <div class="placeholder-circle"></div>
+    </div>
+</div>
+<div class="link-container">
+  <div class="placeholder-container">
+    <div class="placeholder-circle"></div>
+    </div>
+</div>
+<div class="link-container">
+  <div class="placeholder-container">
+    <div class="placeholder-circle"></div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
 </body>
 </html>

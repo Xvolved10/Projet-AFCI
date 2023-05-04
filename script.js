@@ -1068,6 +1068,13 @@ accordionButtons.forEach((button) => {
 
 
 
+
+
+
+
+
+
+
 // const accordionButtons = document.querySelectorAll(".accordion");
 // const navbarHeight = document.querySelector("nav").offsetHeight;
 

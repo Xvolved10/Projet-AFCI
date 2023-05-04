@@ -31,18 +31,20 @@ include_once("models/Database.php");
 
   <?php
   if (isset($_GET["Héros"])) {
-    include_once("Controllers/ctrl_Héros.php");
+    // include_once("Controllers/ctrl_Héros.php");
     include_once("Views/Héros.php");
   } elseif (isset($_GET["Ashe"])) {
     include_once("views/Ashe.php");
   } elseif (isset($_GET["Cartes"])) {
     include_once("views/Cartes.php");
+  }elseif (isset($_GET["Népal"])) {
+    include_once("views/Népal.php");
   }
 
 
-// elseif (isset($_GET["Test"])) {
-  //   include_once("views/Test.php");
-  // } 
+elseif (isset($_GET["Test"])) {
+    include_once("views/Test.php");
+  } 
   ?>
 
     <!-- Banniere bas de page -->
@@ -86,7 +88,7 @@ include_once("models/Database.php");
           <a class="a_footer" href="OWLore.pro@gmail.com">OWLore.pro@gmail.com</a>
         </div>
         <div class="col-md-4">
-          <li><a href="#"><img class="logoFooter" src="image/Frame 2.png" alt="Logo"></a></li>
+          <a href="#"><img class="logoFooter" src="image/Frame 2.png" alt="Logo"></a>
         </div>
         <div class="col-md-4">
           <p>Tous droits réservés</p>

@@ -20,7 +20,7 @@ include_once("models/Database.php");
 <body>
   <!-- Navbar -->
   <nav id="nav">
-    <ul class="ul_nav" >
+    <ul class="ul_nav">
       <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="#">Héros</a></li>
       <li><a class="Navigation" href="#">Cartes</a></li>
@@ -37,24 +37,21 @@ include_once("models/Database.php");
     include_once("views/Ashe.php");
   } elseif (isset($_GET["Cartes"])) {
     include_once("views/Cartes.php");
-  }elseif (isset($_GET["Népal"])) {
+  } elseif (isset($_GET["Népal"])) {
     include_once("views/Népal.php");
-  }
-
-
-elseif (isset($_GET["Test"])) {
+  } elseif (isset($_GET["Test"])) {
     include_once("views/Test.php");
-  } 
+  }
   ?>
 
-    <!-- Banniere bas de page -->
-    <section>
-        <div>
-            <img class="header-image img-fluid" src="image/thumb_4905_post_big.jpg" alt="Ow-">
+  <!-- Banniere bas de page -->
+  <section>
+    <div>
+      <img class="header-image img-fluid" src="image/thumb_4905_post_big.jpg" alt="Ow-">
 
-        </div>
+    </div>
 
-    </section>
+  </section>
 
   <!-- Création Footer -->
   <footer class="container-fluid">
@@ -103,6 +100,9 @@ elseif (isset($_GET["Test"])) {
 
   </footer>
 
+  <a href="#" class="back-to-top">
+        <img src="image/output-onlinepngtools.png" alt="Flèche vers le haut" class="arrow">
+    </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 

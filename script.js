@@ -1061,8 +1061,16 @@ accordionButtons.forEach((button) => {
 
 
 
-
-
+// JS Arrow To Top
+window.addEventListener('scroll', function() {
+  var backToTopButton = document.querySelector('.back-to-top');
+  
+  if (window.scrollY > window.innerHeight) {
+      backToTopButton.classList.add('show');
+  } else {
+      backToTopButton.classList.remove('show');
+  }
+});
 
 
 

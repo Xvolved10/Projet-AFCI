@@ -88,7 +88,7 @@
     <!-- Images -->
     <section class="images">
         <div class="container">
-            <div class="row justify-content-center align-items-center mt-5 section_images">
+            <div class="row mt-5 section_images">
                 <div class="col-sm-12 col-md-6 col-lg-4 mb-4 ">
                     <div class="card-image ">
                         <img class="img-fluid" src="image/ashe-screenshot-001.1920.jpg" alt="Ashe-1">

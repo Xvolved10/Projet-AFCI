@@ -1078,6 +1078,46 @@ window.addEventListener('scroll', function() {
 
 
 
+// JS Zoom images
+
+// Récupérer toutes les images
+const images = document.querySelectorAll('.card-image img');
+
+// Créer un élément de superposition pour afficher les images agrandies
+const imageZoomOverlay = document.createElement('div');
+imageZoomOverlay.classList.add('image-zoom-overlay');
+document.body.appendChild(imageZoomOverlay);
+
+// Créer un élément pour afficher les images agrandies
+const enlargedImage = document.createElement('img');
+enlargedImage.classList.add('enlarged-image');
+imageZoomOverlay.appendChild(enlargedImage);
+
+// Ajouter un gestionnaire d'événement de clic à chaque image
+images.forEach(image => {
+  image.addEventListener('click', function() {
+    // Récupérer l'URL de l'image cliquée
+    const imageUrl = this.getAttribute('src');
+    
+    // Afficher l'image agrandie dans l'élément d'overlay
+    enlargedImage.setAttribute('src', imageUrl);
+    imageZoomOverlay.style.display = 'flex';
+  });
+});
+
+// Ajouter un gestionnaire d'événement de clic pour fermer l'image agrandie
+imageZoomOverlay.addEventListener('click', function() {
+  imageZoomOverlay.style.display = 'none';
+});
+
+
+
+
+
+
+
+
+
 
 
 

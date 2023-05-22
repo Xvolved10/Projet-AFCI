@@ -22,8 +22,8 @@ include_once("models/Database.php");
   <nav id="nav">
     <ul class="ul_nav">
       <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
-      <li><a class="Navigation" href="#">Héros</a></li>
-      <li><a class="Navigation" href="#">Cartes</a></li>
+      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
+      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
       <li><a class="Navigation" href="#">Forums</a></li>
       <li class="Btnconnexion"><a href="#">Se connecter</a></li>
     </ul>

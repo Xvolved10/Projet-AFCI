@@ -1114,6 +1114,180 @@ imageZoomOverlay.addEventListener('click', function() {
 
 
 
+// // JS Pop-up connexion
+
+// document.getElementById("loginButton").addEventListener("click", function() {
+//   document.getElementById("loginPopup").style.display = "block";
+// });
+
+// document.getElementById("loginPopup").addEventListener("click", function(event) {
+//   if (event.target === this) {
+//     this.style.display = "none";
+//   }
+// });
+
+// document.getElementById("loginForm").addEventListener("submit", function(event) {
+//   event.preventDefault();
+  
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+    
+//   document.getElementById("username").value = "";
+//   document.getElementById("password").value = "";
+  
+//   document.getElementById("loginPopup").style.display = "none";
+// });
+
+
+
+// // JS Création de compte 
+// var loginContent = document.getElementById("loginContent");
+// var createAccountButton = document.querySelector(".creation");
+
+// createAccountButton.addEventListener("click", function() {
+//   // Modifier le titre du formulaire
+//   loginContent.querySelector("h2").textContent = "Créer un compte";
+
+//   // Remplacer les champs de connexion par ceux de création de compte
+//   var emailField = document.createElement("input");
+//   emailField.type = "email";
+//   emailField.id = "email";
+//   emailField.name = "email";
+//   emailField.placeholder = "Votre adresse e-mail";
+
+//   var usernameField = document.createElement("input");
+//   usernameField.type = "text";
+//   usernameField.id = "newUsername";
+//   usernameField.name = "newUsername";
+//   usernameField.placeholder = "Votre nom d'utilisateur";
+
+//   var passwordField = document.createElement("input");
+//   passwordField.type = "password";
+//   passwordField.id = "newPassword";
+//   passwordField.name = "newPassword";
+//   passwordField.placeholder = "Votre mot de passe";
+
+//   var loginForm = document.getElementById("loginForm");
+//   loginForm.innerHTML = ""; // Supprimer les champs existants
+//   loginForm.appendChild(emailField);
+//   loginForm.appendChild(usernameField);
+//   loginForm.appendChild(passwordField);
+
+//   // Modifier l'action du bouton de soumission du formulaire
+//   var submitButton = document.querySelector(".submit");
+//   submitButton.value = "Créer un compte";
+// });
+
+
+
+
+// JS bouton Se connecter
+var loginButton = document.getElementById("loginButton");
+var loginPopup = document.getElementById("loginPopup");
+var loginForm = document.getElementById("loginForm");
+var loginContent = document.getElementById("loginContent");
+var createAccountForm = null;
+
+loginButton.addEventListener("click", function() {
+  loginContent.querySelector("h2").textContent = "Connexion";
+
+  // Supprimer le formulaire de création de compte s'il est présent
+  if (createAccountForm) {
+    createAccountForm.remove();
+    createAccountForm = null;
+  }
+
+  loginForm.style.display = "block";
+  loginPopup.style.display = "block";
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === loginPopup) {
+    loginPopup.style.display = "none";
+    if (createAccountForm) {
+      createAccountForm.remove();
+      createAccountForm = null;
+    }
+  }
+});
+
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+
+  // Traitement de la connexion
+  // ...
+});
+
+var createAccountButton = document.querySelector(".creation");
+
+createAccountButton.addEventListener("click", function() {
+  loginContent.querySelector("h2").textContent = "Créer un compte";
+
+  // Supprimer le formulaire de connexion s'il est présent
+  if (loginForm) {
+    loginForm.style.display = "none";
+  }
+
+  // Créer le formulaire de création de compte s'il n'existe pas encore
+  if (!createAccountForm) {
+    createAccountForm = document.createElement("form");
+    createAccountForm.id = "createAccountForm";
+
+    var emailLabel = document.createElement("label");
+    emailLabel.textContent = "Adresse e-mail :";
+    emailLabel.setAttribute("for", "email");
+
+    var emailField = document.createElement("input");
+    emailField.type = "email";
+    emailField.id = "email";
+    emailField.name = "email";
+    emailField.placeholder = "Votre adresse e-mail";
+
+    var usernameLabel = document.createElement("label");
+    usernameLabel.textContent = "Nom d'utilisateur :";
+    usernameLabel.setAttribute("for", "newUsername");
+
+    var usernameField = document.createElement("input");
+    usernameField.type = "text";
+    usernameField.id = "newUsername";
+    usernameField.name = "newUsername";
+    usernameField.placeholder = "Votre nom d'utilisateur";
+
+    var passwordLabel = document.createElement("label");
+    passwordLabel.textContent = "Mot de passe :";
+    passwordLabel.setAttribute("for", "newPassword");
+
+    var passwordField = document.createElement("input");
+    passwordField.type = "password";
+    passwordField.id = "newPassword";
+    passwordField.name = "newPassword";
+    passwordField.placeholder = "Votre mot de passe";
+
+    var createButton = document.createElement("input");
+    createButton.type = "submit";
+    createButton.className = "submit creation";
+    createButton.value = "Créer un compte";
+
+    createAccountForm.appendChild(emailLabel);
+    createAccountForm.appendChild(emailField);
+    createAccountForm.appendChild(usernameLabel);
+    createAccountForm.appendChild(usernameField);
+    createAccountForm.appendChild(passwordLabel);
+    createAccountForm.appendChild(passwordField);
+    createAccountForm.appendChild(createButton);
+
+    loginContent.appendChild(createAccountForm);
+  }
+
+  createAccountForm.style.display = "block";
+});
+
 
 
 

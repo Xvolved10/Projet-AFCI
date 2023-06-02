@@ -19,7 +19,7 @@ include_once("models/Database.php");
 
 <body>
   <!-- Navbar -->
-  <nav id="nav">
+  <!-- <nav id="nav">
     <ul class="ul_nav">
       <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
@@ -27,7 +27,38 @@ include_once("models/Database.php");
       <li><a class="Navigation" href="#">Forums</a></li>
       <li class="Btnconnexion"><a href="#">Se connecter</a></li>
     </ul>
-  </nav>
+  </nav> -->
+
+<!-- Navbar -->
+<nav id="nav">
+  <ul class="ul_nav">
+    <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
+    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
+    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
+    <li><a class="Navigation" href="#">Forums</a></li>
+    <li class="Btnconnexion"><a href="#" id="loginButton">Se connecter</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div id="loginPopup" class="modal">
+  <div class="modal-content" id="loginContent">
+    <h2>Connexion</h2>
+    <form id="loginForm">
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" id="username" name="username" placeholder="Votre nom d'utilisateur">
+      
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" placeholder="Votre mot de passe">
+      
+      <input type="submit" class="submit connection" value="Se connecter">
+      <input type="button" class="submit creation" value="Créer un compte ?">
+    </form>
+  </div>
+</div>
 
   <?php
   if (isset($_GET["Héros"])) {

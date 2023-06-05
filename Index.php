@@ -1,7 +1,10 @@
 <?php
 session_start();
-include_once("models/Constantes.php");
-include_once("models/Database.php");
+include_once("Models/Database.php");
+include_once("Models/Constantes.php");
+include("Models/Utilisateurs.php");
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +22,7 @@ include_once("models/Database.php");
 
 <body>
   <!-- Navbar -->
-  <nav id="nav">
+  <!-- <nav id="nav">
     <ul class="ul_nav">
       <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
@@ -27,9 +30,51 @@ include_once("models/Database.php");
       <li><a class="Navigation" href="#">Forums</a></li>
       <li class="Btnconnexion"><a href="#">Se connecter</a></li>
     </ul>
-  </nav>
+  </nav> -->
+
+<!-- Navbar -->
+<nav id="nav">
+  <ul class="ul_nav">
+    <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
+    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
+    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
+    <li><a class="Navigation" href="#">Forums</a></li>
+    <li class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div id="loginPopup" class="modal">
+  <div class="modal-content" id="loginContent">
+    <h2>Connexion</h2>
+    <form method="post" id="loginForm" name="formconnexion">
+      <label for="username">Adresse Email :</label>
+      <input type="text" id="email" name="email" placeholder="Votre adresse email">
+      <?php
+            if (isset($error["email"])) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><?php echo $error["email"]; ?></p>
+                </div>
+            <?php } ?><br><br>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="Motdepasse" placeholder="Votre mot de passe">
+      <?php
+            if (isset($error["MotDepasse"])) { ?>
+                <p><?php echo $error["MotDepasse"]; ?></p>
+            <?php } ?>
+
+      <input type="submit" value="Connexion" name="Connexion" class="submit connexion" >
+      <input type="button" class="submit creation" value="Créer un compte ?">
+    </form>
+  </div>
+</div>
 
   <?php
+  
   if (isset($_GET["Héros"])) {
     // include_once("Controllers/ctrl_Héros.php");
     include_once("Views/Héros.php");
@@ -40,7 +85,14 @@ include_once("models/Database.php");
   } elseif (isset($_GET["Népal"])) {
     include_once("views/Népal.php");
   } elseif (isset($_GET["Test"])) {
+    include_once("controllers/ctrl_connexion.php");
     include_once("views/Test.php");
+  }else if(isset($_GET["Inscription"])){
+    include_once("controllers/Inscriptionctrl.php");
+    include_once("views/IndexInscription.php");
+  } else if(isset($_GET["Connexion"])){
+    include_once("controllers/Connexionctrl.php");
+    include_once("views/IndexConnexion.php");
   }
   ?>
 

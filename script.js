@@ -1114,6 +1114,180 @@ imageZoomOverlay.addEventListener('click', function() {
 
 
 
+// // JS Pop-up connexion
+
+// document.getElementById("loginButton").addEventListener("click", function() {
+//   document.getElementById("loginPopup").style.display = "block";
+// });
+
+// document.getElementById("loginPopup").addEventListener("click", function(event) {
+//   if (event.target === this) {
+//     this.style.display = "none";
+//   }
+// });
+
+// document.getElementById("loginForm").addEventListener("submit", function(event) {
+//   event.preventDefault();
+  
+//   var pseudo = document.getElementById("pseudo").value;
+//   var Motdepasse = document.getElementById("Motdepasse").value;
+    
+//   document.getElementById("pseudo").value = "";
+//   document.getElementById("Motdepasse").value = "";
+  
+//   document.getElementById("loginPopup").style.display = "none";
+// });
+
+
+
+// // JS Création de compte 
+// var loginContent = document.getElementById("loginContent");
+// var createAccountButton = document.querySelector(".creation");
+
+// createAccountButton.addEventListener("click", function() {
+//   // Modifier le titre du formulaire
+//   loginContent.querySelector("h2").textContent = "Créer un compte";
+
+//   // Remplacer les champs de connexion par ceux de création de compte
+//   var emailField = document.createElement("input");
+//   emailField.type = "email";
+//   emailField.id = "email";
+//   emailField.name = "email";
+//   emailField.placeholder = "Votre adresse e-mail";
+
+//   var pseudoField = document.createElement("input");
+//   pseudoField.type = "text";
+//   pseudoField.id = "newpseudo";
+//   pseudoField.name = "newpseudo";
+//   pseudoField.placeholder = "Votre nom d'utilisateur";
+
+//   var MotdepasseField = document.createElement("input");
+//   MotdepasseField.type = "Motdepasse";
+//   MotdepasseField.id = "newMotdepasse";
+//   MotdepasseField.name = "newMotdepasse";
+//   MotdepasseField.placeholder = "Votre mot de passe";
+
+//   var loginForm = document.getElementById("loginForm");
+//   loginForm.innerHTML = ""; // Supprimer les champs existants
+//   loginForm.appendChild(emailField);
+//   loginForm.appendChild(pseudoField);
+//   loginForm.appendChild(MotdepasseField);
+
+//   // Modifier l'action du bouton de soumission du formulaire
+//   var submitButton = document.querySelector(".submit");
+//   submitButton.value = "Créer un compte";
+// });
+
+
+
+
+// // JS bouton Se connecter
+// var loginButton = document.getElementById("loginButton");
+// var loginPopup = document.getElementById("loginPopup");
+// var loginForm = document.getElementById("loginForm");
+// var loginContent = document.getElementById("loginContent");
+// var createAccountForm = null;
+
+// loginButton.addEventListener("click", function() {
+//   loginContent.querySelector("h2").textContent = "Connexion";
+
+//   // Supprimer le formulaire de création de compte s'il est présent
+//   if (createAccountForm) {
+//     createAccountForm.remove();
+//     createAccountForm = null;
+//   }
+
+//   loginForm.style.display = "block";
+//   loginPopup.style.display = "block";
+// });
+
+// window.addEventListener("click", function(event) {
+//   if (event.target === loginPopup) {
+//     loginPopup.style.display = "none";
+//     if (createAccountForm) {
+//       createAccountForm.remove();
+//       createAccountForm = null;
+//     }
+//   }
+// });
+
+// loginForm.addEventListener("submit", function(event) {
+//   event.preventDefault();
+
+//   var pseudo = document.getElementById("pseudo").value;
+//   var Motdepasse = document.getElementById("Motdepasse").value;
+
+//   document.getElementById("pseudo").value = "";
+//   document.getElementById("Motdepasse").value = "";
+
+//   // Traitement de la connexion
+//   // ...
+// });
+
+// var createAccountButton = document.querySelector(".creation");
+
+// createAccountButton.addEventListener("click", function() {
+//   loginContent.querySelector("h2").textContent = "Créer un compte";
+
+//   // Supprimer le formulaire de connexion s'il est présent
+//   if (loginForm) {
+//     loginForm.style.display = "none";
+//   }
+
+//   // Créer le formulaire de création de compte s'il n'existe pas encore
+//   if (!createAccountForm) {
+//     createAccountForm = document.createElement("form");
+//     createAccountForm.id = "createAccountForm";
+
+//     var emailLabel = document.createElement("label");
+//     emailLabel.textContent = "Adresse e-mail :";
+//     emailLabel.setAttribute("for", "email");
+
+//     var emailField = document.createElement("input");
+//     emailField.type = "email";
+//     emailField.id = "email";
+//     emailField.name = "email";
+//     emailField.placeholder = "Votre adresse e-mail";
+
+//     var pseudoLabel = document.createElement("label");
+//     pseudoLabel.textContent = "Nom d'utilisateur :";
+//     pseudoLabel.setAttribute("for", "newpseudo");
+
+//     var pseudoField = document.createElement("input");
+//     pseudoField.type = "text";
+//     pseudoField.id = "newpseudo";
+//     pseudoField.name = "newpseudo";
+//     pseudoField.placeholder = "Votre nom d'utilisateur";
+
+//     var MotdepasseLabel = document.createElement("label");
+//     MotdepasseLabel.textContent = "Mot de passe :";
+//     MotdepasseLabel.setAttribute("for", "newMotdepasse");
+
+//     var MotdepasseField = document.createElement("input");
+//     MotdepasseField.type = "Motdepasse";
+//     MotdepasseField.id = "newMotdepasse";
+//     MotdepasseField.name = "newMotdepasse";
+//     MotdepasseField.placeholder = "Votre mot de passe";
+
+//     var createButton = document.createElement("input");
+//     createButton.type = "submit";
+//     createButton.className = "submit creation";
+//     createButton.value = "Créer un compte";
+
+//     createAccountForm.appendChild(emailLabel);
+//     createAccountForm.appendChild(emailField);
+//     createAccountForm.appendChild(pseudoLabel);
+//     createAccountForm.appendChild(pseudoField);
+//     createAccountForm.appendChild(MotdepasseLabel);
+//     createAccountForm.appendChild(MotdepasseField);
+//     createAccountForm.appendChild(createButton);
+
+//     loginContent.appendChild(createAccountForm);
+//   }
+
+//   createAccountForm.style.display = "block";
+// });
+
 
 
 
@@ -1329,15 +1503,15 @@ imageZoomOverlay.addEventListener('click', function() {
 // Carrousel Accueil JQUERY
 
   // Configurer l'intervalle de temps de 5 secondes pour le défilement automatique
-  $('.carousel').carousel({
-    interval: 5000
-  });
+  // $('.carousel').carousel({
+  //   interval: 5000
+  // });
 
-  // Ajouter la fonctionnalité de défilement manuel
-  $('.carousel-control-prev').click(function() {
-    $('#myCarousel').carousel('prev');
-  });
+  // // Ajouter la fonctionnalité de défilement manuel
+  // $('.carousel-control-prev').click(function() {
+  //   $('#myCarousel').carousel('prev');
+  // });
 
-  $('.carousel-control-next').click(function() {
-    $('#myCarousel').carousel('next');
-  });
+  // $('.carousel-control-next').click(function() {
+  //   $('#myCarousel').carousel('next');
+  // });

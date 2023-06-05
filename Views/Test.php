@@ -26,7 +26,7 @@
 
 
 
-  <section class="row">
+  <!-- <section class="row">
     <h1 class="linked-characters">Personnages liés</h1>
 
     <div class="link-container">
@@ -74,9 +74,60 @@
       </a>
     </div>
     
-  </section>
+  </section> -->
 
 
+  <div class="modal-content" id="loginContent">
+    <h2>Connexion</h2>
+    <form method="post" id="loginForm">
+      <label for="username">Adresse Email :</label>
+      <input type="text" id="email" name="email" placeholder="Votre adresse email">
+      <?php
+            if (isset($error["email"])) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><?php echo $error["email"]; ?></p>
+                </div>
+            <?php } ?><br><br>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="Motdepasse" placeholder="Votre mot de passe">
+      <?php
+            if (isset($error["MotDepasse"])) { ?>
+                <p><?php echo $error["MotDepasse"]; ?></p>
+            <?php } ?>
+
+      <input type="submit" value="Connexion" name="Connexion" class="submit connexion" >
+      <input type="button" class="submit creation" value="Créer un compte ?">
+    </form>
+  </div>
+</div>
+
+<div >
+    <h2>Inscription</h2>
+    <form method="post" id="loginForm">
+      <label for="username">Adresse Email :</label>
+      <input type="text" id="email" name="email" placeholder="Votre adresse email">
+      <?php
+            if (isset($error["email"])) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><?php echo $error["email"]; ?></p>
+                </div>
+            <?php } ?><br><br>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="Motdepasse" placeholder="Votre mot de passe">
+      <?php
+            if (isset($error["MotDepasse"])) { ?>
+            <div class="alert alert-danger" role="alert">
+                <p><?php echo $error["MotDepasse"]; ?></p>
+            </div>
+            <?php } ?>
+
+      <input type="submit" value="Connexion" name="Connexion" class="submit connexion" >
+      <input type="button" class="submit creation" value="Créer un compte ?">
+    </form>
+  </div>
+</div>
 
 
 </body>

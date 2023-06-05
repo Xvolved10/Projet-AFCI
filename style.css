@@ -713,6 +713,72 @@ margin: 0;
 
 
 
+
+
+/* #loginPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30em;
+  height: 30em;
+  padding: 20px;
+  background-color: #ffbb00;
+  border: 3px solid black;
+}
+
+#loginForm{
+  width: 30em;
+  height: 20em;
+
+}
+
+.modal-content {
+  margin-top: 30px;
+} */
+
+#loginPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 3px solid black;
+}
+
+.submit {
+margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Test */
 
 

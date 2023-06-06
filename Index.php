@@ -84,15 +84,18 @@ include("Models/Utilisateurs.php");
     include_once("views/Cartes.php");
   } elseif (isset($_GET["Népal"])) {
     include_once("views/Népal.php");
-  } elseif (isset($_GET["Test"])) {
-    include_once("controllers/ctrl_connexion.php");
-    include_once("views/Test.php");
+  // } elseif (isset($_GET["Test"])) {
+  //   include_once("controllers/Connexionctrl.php");
+  //   include_once("views/Test.php");
   }else if(isset($_GET["Inscription"])){
     include_once("controllers/Inscriptionctrl.php");
     include_once("views/IndexInscription.php");
   } else if(isset($_GET["Connexion"])){
     include_once("controllers/Connexionctrl.php");
     include_once("views/IndexConnexion.php");
+  }  else if(isset($_GET["Profil"])){
+    include_once("controllers/Profilctrl.php");
+    include_once("views/Profil.php");
   }
   ?>
 

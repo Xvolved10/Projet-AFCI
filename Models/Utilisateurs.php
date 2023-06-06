@@ -78,7 +78,7 @@ class Utilisateurs extends Database{
 
     public function connexion()
     {
-        $infosUser = $this->pdo->prepare("SELECT `ID_utilisateur`,`email`, `MotDepasse`,`pseudo` FROM `utilisateurs` WHERE email = ?");
+        $infosUser = $this->pdo->prepare("SELECT `ID_utilisateur`,`email`, `MotDepasse`,`pseudo`,`ID_role` FROM `utilisateurs` WHERE email = ?");
 
         $infosUser->bindValue(1, $this->email, PDO::PARAM_STR);
 
@@ -94,6 +94,21 @@ class Utilisateurs extends Database{
         $nbuser->bindValue(2, $this->pseudo, PDO::PARAM_STR);
         $nbuser->execute();
         return $nbuser->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Requête affichage profil 
+    public function select()
+    {
+        echo $this->ID_utilisateur;
+
+        $infosUsers = $this->pdo->prepare("SELECT `ID_utilisateur`, `email`, `MotDepasse`, `pseudo`, `ID_role`
+    FROM `utilisateurs` 
+    WHERE `ID_utilisateur` =?");
+        $infosUsers->bindValue(1, $this->ID_utilisateur, PDO::PARAM_INT);
+
+        $infosUsers->execute();
+
+        return $infosUsers->fetch(PDO::FETCH_ASSOC);
     }
 
 }

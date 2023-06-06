@@ -32,11 +32,11 @@
             <?php } ?><br><br>
 
             <label for="password">Mot de passe :</label>
-            <input type="password" name="Motdepasse" placeholder="Votre mot de passe">
+            <input type="password" name="MotDepasse" placeholder="Votre mot de passe">
             <?php
-            if (isset($error["Motdepasse"])) { ?>
+            if (isset($error["MotDepasse"])) { ?>
                 <div class="alert alert-danger" role="alert">
-                    <p><?php echo $error["Motdepasse"]; ?></p>
+                    <p><?php echo $error["MotDepasse"]; ?></p>
                 </div>
             <?php } ?><br><br>
 

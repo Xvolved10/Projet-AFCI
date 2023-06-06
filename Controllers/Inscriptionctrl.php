@@ -9,20 +9,20 @@ if (isset($_POST["Inserer"])) {
         if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             $email = $_POST["email"];
         } else {
-            $error['email'] = "renseigner un email validé";
+            $error['email'] = "renseigner un email valide";
         }
     } else {
         $error['email'] = "Le champ email est manquant";
     }
-    if (isset($_POST["Motdepasse"]) && !empty($_POST["Motdepasse"])) {
-        if (mb_strlen($_POST["Motdepasse"]) >= 8) {
-            $Motdepasse = password_hash($_POST["Motdepasse"], PASSWORD_DEFAULT);
+    if (isset($_POST["MotDepasse"]) && !empty($_POST["MotDepasse"])) {
+        if (mb_strlen($_POST["MotDepasse"]) >= 8) {
+            $MotDepasse = password_hash($_POST["MotDepasse"], PASSWORD_DEFAULT);
             // var_dump($hashed_password);
         } else {
-            $error['Motdepasse'] = "entrez au moins 8 caracteres";
+            $error['MotDepasse'] = "entrez au moins 8 caracteres";
         }
     } else {
-        $error['Motdepasse'] = "Le mot de passe est manquant";
+        $error['MotDepasse'] = "Le mot de passe est manquant";
     }
 
     if (isset($_POST["pseudo"]) && !empty($_POST["pseudo"])) {
@@ -33,20 +33,20 @@ if (isset($_POST["Inserer"])) {
     if (empty($error)) {
         echo "pass";
         $ajoue->setEmail($email);
-        $ajoue->setMotdepasse($Motdepasse);
+        $ajoue->setMotDepasse($MotDepasse);
         $ajoue->setPseudo($pseudo);
         $user = $ajoue->VerifMail_Pseudo();
         var_dump($user);
         if ($user === false) {
             $ajoue->insert();
             $message = "profil crée";
-            // header("Location:index.php?Connexion");
+            header("Location:index.php?Connexion");
         } else {
             if ($user["email"] === $email) {
-                $emailExiste = "le mail n'est pas dispo";
+                $error['email'] = "le mail n'est pas dispo";
             }
             if ($user["pseudo"] === $pseudo) {
-                $pseudoExiste = "le pseudo n'est pas dispo";
+                $error['pseudo'] = "le pseudo n'est pas dispo";
             }
         }
     }

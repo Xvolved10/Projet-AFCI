@@ -13,34 +13,37 @@ if (isset($_POST["Connexion"])) {
             $error["email"] = "Il faut renseigner un e-mail valide";
         }
     } else {
-        $error['email'] = "<p>Le champ email est vide</p>";
-        echo "ZBOUB";
+        $error["email"] = "<p>Le champ email est vide</p>";
     }
 
-    if (isset($_POST['Motdepasse']) && !empty($_POST['Motdepasse'])) {
-        $Motdepasse = $_POST['Motdepasse'];
+    if (isset($_POST['MotDepasse']) && !empty($_POST['MotDepasse'])) {
+        $MotDepasse = $_POST["MotDepasse"];
     } else {
-        $error['Motdepasse'] = "<p>Ce mot de passe n'existe pas</p>";
+        $error["MotDepasse"] = "<p>Ce mot de passe n'existe pas</p>";
     }
 
     if (empty($error)) {
         try {
             $ajoue->setEmail($email);
-            $ajoue->setMotdepasse($Motdepasse);
+            $ajoue->setMotDepasse($MotDepasse);
             $a = $ajoue->connexion();
-            var_dump($a);
-            echo "salut les potes";
+            // var_dump($a);
+
             
             if ($a === false) {
                 $messageprofil = "<p>Ce profil n'existe pas </p>";
             } else {
-                if (password_verify($Motdepasse, $a['Motdepasse'])){
+                echo "pass;";
+                echo $a['MotDepasse'];
+                echo $MotDepasse;
+                if (password_verify($MotDepasse, $a['MotDepasse'])){
                     $_SESSION["ID_utilisateur"] = $a["ID_utilisateur"];
                     $_SESSION["email"] = $a["email"];
-                    $_SESSION["Motdepasse"] = $a["Motdepasse"];
+                    $_SESSION["MotDepasse"] = $a["MotDepasse"];
                     $_SESSION["pseudo"] = $a["pseudo"];
-                    
-                    // header("Location:Index.php?Héros");
+                    $_SESSION["ID_role"] = $a["ID_role"];
+                    header("Location:index.php?Profil");
+
                     exit();
                  } else {
                     $messageerreur = "<p> Mot de passe incorrect</p>";
@@ -55,4 +58,3 @@ if (isset($_POST["Connexion"])) {
 if (isset($_POST["creercompte"])) {
     header("Location:index.php?Inscription");
 }
-?>

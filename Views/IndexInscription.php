@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
     <div class="image-text">
         <img class="img_background" src="image/1600_Ashe.jpg" alt="Ashe">
         <div class="overlay">
@@ -11,9 +11,9 @@
                 <p>Gorge Deadlock, Arizona, États-Unis</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -41,7 +41,7 @@
             <?php } ?><br><br>
 
             <label for="pseudo">Pseudo :</label>
-            <input type="pseudo" name="pseudo" placeholder="Votre Pseudo">
+            <input type="text" name="pseudo" placeholder="Votre Pseudo">
             <?php
             if (isset($error["pseudo"])) { ?>
                 <div class="alert alert-danger" role="alert">
@@ -49,7 +49,6 @@
                 </div>
             <?php } ?>
 
-            <!-- <button type="submit" value="Inserer" name="Inserer" id="inserer">Créer Profil</button> -->
             <input type="submit" name="Inserer" value="Créer un compte">
             <input type="submit" name="seconnecter" value="Se connecter">
         </form>

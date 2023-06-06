@@ -58,3 +58,4 @@ if (isset($_POST["Connexion"])) {
 if (isset($_POST["creercompte"])) {
     header("Location:index.php?Inscription");
 }
+?>

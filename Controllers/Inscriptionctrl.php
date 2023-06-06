@@ -31,7 +31,7 @@ if (isset($_POST["Inserer"])) {
         $error['pseudo'] = "Le pseudo est manquant";
     }
     if (empty($error)) {
-        echo "pass";
+        // echo "pass";
         $ajoue->setEmail($email);
         $ajoue->setMotDepasse($MotDepasse);
         $ajoue->setPseudo($pseudo);
@@ -40,7 +40,7 @@ if (isset($_POST["Inserer"])) {
         if ($user === false) {
             $ajoue->insert();
             $message = "profil crée";
-            header("Location:index.php?Connexion");
+            header("Location:Index.php?Connexion");
         } else {
             if ($user["email"] === $email) {
                 $error['email'] = "le mail n'est pas dispo";

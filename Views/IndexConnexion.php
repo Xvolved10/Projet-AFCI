@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
   <div class="image-text">
     <img class="img_background" src="image/1600_Ashe.jpg" alt="Ashe">
     <div class="overlay">
@@ -11,8 +11,8 @@
         <p>Gorge Deadlock, Arizona, États-Unis</p>
       </div>
     </div>
-  </div>
-
+  </div> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!-- Formulaire de Connexion -->
 

@@ -32,16 +32,16 @@ include("Models/Utilisateurs.php");
     </ul>
   </nav> -->
 
-<!-- Navbar -->
-<nav id="nav">
-  <ul class="ul_nav">
-    <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
-    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
-    <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
-    <li><a class="Navigation" href="#">Forums</a></li>
-    <li class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav id="nav">
+    <ul class="ul_nav">
+      <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
+      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
+      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
+      <li><a class="Navigation" href="#">Forums</a></li>
+      <li class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
+    </ul>
+  </nav>
 
 
 
@@ -49,7 +49,7 @@ include("Models/Utilisateurs.php");
 
 
   <?php
-  
+
   if (isset($_GET["Héros"])) {
     // include_once("Controllers/ctrl_Héros.php");
     include_once("Views/Héros.php");
@@ -59,19 +59,26 @@ include("Models/Utilisateurs.php");
     include_once("views/Cartes.php");
   } elseif (isset($_GET["Népal"])) {
     include_once("views/Népal.php");
-  // } elseif (isset($_GET["Test"])) {
-  //   include_once("controllers/Connexionctrl.php");
-  //   include_once("views/Test.php");
-  }else if(isset($_GET["Inscription"])){
+    // } elseif (isset($_GET["Test"])) {
+    //   include_once("controllers/Connexionctrl.php");
+    //   include_once("views/Test.php");
+  } else if (isset($_GET["Inscription"])) {
     include_once("controllers/Inscriptionctrl.php");
     include_once("views/IndexInscription.php");
-  } else if(isset($_GET["Connexion"])){
+  } else if (isset($_GET["Connexion"])) {
     include_once("controllers/Connexionctrl.php");
     include_once("views/IndexConnexion.php");
-  }  else if(isset($_GET["Profil"])){
+  } else if (isset($_GET["Profil"])) {
     include_once("controllers/Profilctrl.php");
     include_once("views/Profil.php");
+  } else if(isset($_GET["Modification"])){
+    include_once("controllers/Modificationctrl.php");
+    include_once("views/IndexModification.php");
+  } else if(isset($_GET["Suppression"])){
+    include_once("controllers/Confirmationsuppctrl.php");
+    include_once("views/IndexSuppression.php");
   }
+  
   ?>
 
   <!-- Banniere bas de page -->
@@ -131,12 +138,11 @@ include("Models/Utilisateurs.php");
   </footer>
 
   <a href="#" class="back-to-top">
-        <img src="image/output-onlinepngtools.png" alt="Flèche vers le haut" class="arrow">
-    </a>
+    <img src="image/output-onlinepngtools.png" alt="Flèche vers le haut" class="arrow">
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-  <link href="style.css" rel="stylesheet">
 </body>
 <script type="text/javascript" src="script.js"></script>
 

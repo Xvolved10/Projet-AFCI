@@ -33,9 +33,9 @@ if (isset($_POST["Connexion"])) {
             if ($a === false) {
                 $messageprofil = "<p>Ce profil n'existe pas </p>";
             } else {
-                echo "pass;";
-                echo $a['MotDepasse'];
-                echo $MotDepasse;
+                // echo "pass;";
+                // echo $a['MotDepasse'];
+                // echo $MotDepasse;
                 if (password_verify($MotDepasse, $a['MotDepasse'])){
                     $_SESSION["ID_utilisateur"] = $a["ID_utilisateur"];
                     $_SESSION["email"] = $a["email"];

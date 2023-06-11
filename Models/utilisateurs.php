@@ -9,7 +9,7 @@ class Utilisateurs extends Database
     private $MotDepasse;
     private $Date_d_inscription;
     private $ID_role;
-
+    private $avatar;
 
     public function getID_utilisateur()
     {
@@ -64,7 +64,14 @@ class Utilisateurs extends Database
     {
         return $this->ID_role = $ID_role;
     }
-
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+    public function setAvatar($avatar)
+    {
+        return $this->avatar = $avatar;
+    }
 
     // Requete Création Compte
     public function insert()
@@ -94,7 +101,7 @@ class Utilisateurs extends Database
     {
         echo $this->ID_utilisateur;
 
-        $infosUsers = $this->pdo->prepare("SELECT `ID_utilisateur`, `email`, `MotDepasse`, `pseudo`, `ID_role` 
+        $infosUsers = $this->pdo->prepare("SELECT `ID_utilisateur`, `email`, `MotDepasse`, `pseudo`, `Date_d_inscription`, `ID_role` 
     FROM `utilisateurs` 
     WHERE `ID_utilisateur` = ?");
         $infosUsers->bindValue(1, $this->ID_utilisateur, PDO::PARAM_INT);
@@ -114,5 +121,13 @@ class Utilisateurs extends Database
         $nbuser->bindValue(2, $this->pseudo, PDO::PARAM_STR);
         $nbuser->execute();
         return $nbuser->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Requete Suppression
+    public function delete()
+    {
+        $delete = $this->pdo->prepare("DELETE FROM utilisateurs WHERE ID_utilisateur = ?");
+        $delete->bindValue(1, $this->ID_utilisateur, PDO::PARAM_STR);
+        $delete->execute();
     }
 }

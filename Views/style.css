@@ -12,7 +12,7 @@
 
 
 /* Body  */
-body {
+.body {
   background-color: #7183bb;
   width: 100%;
   align-items: flex-start;
@@ -182,7 +182,7 @@ footer {
   padding: 60px 0;
   font-size: 18px;
   line-height: 1.5;
-padding-bottom: 0;
+  padding-bottom: 0;
 
 }
 
@@ -738,7 +738,7 @@ margin: 0;
   margin-top: 30px;
 } */
 
-#loginPopup {
+/* #loginPopup {
   display: none;
   position: fixed;
   top: 0;
@@ -761,14 +761,34 @@ margin: 0;
 
 .submit {
 margin-top: 1em;
+} */
+
+
+
+.profil {
+  border: 2px solid black;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
 }
 
+.deconnexion {
+  background-color: red;
+  color: white;
+  height: 50px;
+  padding-left: 1%;
+  padding-right: 1%
+}
 
-
-
-
-
-
+.supprimer {
+  color: crimson;
+  background-color: black;
+  margin-bottom: 3%;
+  height: 50px;
+  padding-left: 1%;
+  padding-right: 1%
+}
 
 
 

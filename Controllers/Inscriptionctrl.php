@@ -36,7 +36,7 @@ if (isset($_POST["Inserer"])) {
         $ajoue->setMotDepasse($MotDepasse);
         $ajoue->setPseudo($pseudo);
         $user = $ajoue->VerifMail_Pseudo();
-        var_dump($user);
+        // var_dump($user);
         if ($user === false) {
             $ajoue->insert();
             $message = "profil crée";
@@ -51,6 +51,8 @@ if (isset($_POST["Inserer"])) {
         }
     }
 }
+
+// Bouton seconnecter
 if(isset($_POST["seconnecter"])) {
     header("Location:index.php?Connexion");
 }

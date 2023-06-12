@@ -39,7 +39,7 @@ include("Models/Utilisateurs.php");
       <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
       <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
       <li><a class="Navigation" href="#">Forums</a></li>
-      <li class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
+      <li id="loginLi" class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
     </ul>
   </nav>
 
@@ -71,14 +71,14 @@ include("Models/Utilisateurs.php");
   } else if (isset($_GET["Profil"])) {
     include_once("controllers/Profilctrl.php");
     include_once("views/Profil.php");
-  } else if(isset($_GET["Modification"])){
+  } else if (isset($_GET["Modification"])) {
     include_once("controllers/Modificationctrl.php");
     include_once("views/IndexModification.php");
-  } else if(isset($_GET["Suppression"])){
+  } else if (isset($_GET["Suppression"])) {
     include_once("controllers/Confirmationsuppctrl.php");
     include_once("views/IndexSuppression.php");
   }
-  
+
   ?>
 
   <!-- Banniere bas de page -->

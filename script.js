@@ -1111,7 +1111,18 @@ imageZoomOverlay.addEventListener('click', function() {
 });
 
 
+// JS Bouton Se Connecter -> Profil
+function modifierBouton() {
+  var bouton = document.getElementById("loginButton");
+  bouton.innerHTML = "Profil";
+  bouton.href = "http://localhost/PHP/Evaluation/Index.php?Profil";
+}
 
+function restaurerBouton() {
+  var bouton = document.getElementById("loginButton");
+  bouton.innerHTML = "Se connecter";
+  bouton.href = "http://localhost/PHP/Evaluation/Index.php?Connexion";
+}
 
 
 // // JS Pop-up connexion

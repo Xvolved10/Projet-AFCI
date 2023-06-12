@@ -27,15 +27,11 @@ if (isset($_POST["Connexion"])) {
             $ajoue->setEmail($email);
             $ajoue->setMotDepasse($MotDepasse);
             $a = $ajoue->connexion();
-            // var_dump($a);
 
             
             if ($a === false) {
                 $messageprofil = "<p>Ce profil n'existe pas </p>";
             } else {
-                // echo "pass;";
-                // echo $a['MotDepasse'];
-                // echo $MotDepasse;
                 if (password_verify($MotDepasse, $a['MotDepasse'])){
                     $_SESSION["ID_utilisateur"] = $a["ID_utilisateur"];
                     $_SESSION["email"] = $a["email"];
@@ -43,6 +39,7 @@ if (isset($_POST["Connexion"])) {
                     $_SESSION["pseudo"] = $a["pseudo"];
                     $_SESSION["ID_role"] = $a["ID_role"];
                     header("Location:index.php?Profil");
+
 
                     exit();
                  } else {

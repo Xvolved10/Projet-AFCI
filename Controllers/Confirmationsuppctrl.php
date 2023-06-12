@@ -11,6 +11,7 @@ if (isset($_POST["Supprimer"])) {
             session_destroy();
             header("Location:index.php?Inscription");
 
+
         } catch (Exception $e) {
             echo "<p>ERREUR : " . $e->getMessage() . "</p>";
         }

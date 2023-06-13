@@ -3,7 +3,7 @@ session_start();
 include_once("Models/Database.php");
 include_once("Models/Constantes.php");
 include("Models/Utilisateurs.php");
-
+include("Models/sujets.php")
 
 ?>
 <!DOCTYPE html>
@@ -36,10 +36,10 @@ include("Models/Utilisateurs.php");
   <nav id="nav">
     <ul class="ul_nav">
       <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
-      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
-      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
-      <li><a class="Navigation" href="#">Forums</a></li>
-      <li id="loginLi" class="Btnconnexion"><a href="http://localhost/PHP/Evaluation/Index.php?Connexion#" id="loginButton">Se connecter</a></li>
+      <li><a class="Navigation" href="Index.php?Héros#">Héros</a></li>
+      <li><a class="Navigation" href="Index.php?Cartes#">Cartes</a></li>
+      <li><a class="Navigation" href="Index.php?Forums#">Forums</a></li>
+      <li id="loginLi" class="Btnconnexion"><a href="Index.php?Connexion#" id="loginButton">Se connecter</a></li>
     </ul>
   </nav>
 
@@ -77,7 +77,14 @@ include("Models/Utilisateurs.php");
   } else if (isset($_GET["Suppression"])) {
     include_once("controllers/Confirmationsuppctrl.php");
     include_once("views/IndexSuppression.php");
+  } else if (isset($_GET["Forums"])) {
+    include_once("controllers/Forumsctrl.php");
+    include_once("views/Forums.php");
+  } else if (isset($_GET["NouveauSujet"])) {
+    include_once("controllers/NouveauSujetctrl.php");
+    include_once("views/NouveauSujet.php");
   }
+  
 
   ?>
 

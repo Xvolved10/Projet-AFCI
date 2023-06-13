@@ -1,10 +1,4 @@
 <body class="body">
-    <!-- Header
-    <header class="header padding-top-bottom">
-        <div class="container-fluid">
-            <img class="header-image1 img-fluid" src="image/Banniere.png" alt="image-tête"><br>
-        </div>
-    </header> -->
 
 
 

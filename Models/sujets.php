@@ -11,6 +11,7 @@ class Sujets extends Database{
     private $ID_commentaire;
     private $Contenu_commentaire;	
     private $Date_publication;
+    private $pseudo;
 
    
 
@@ -94,11 +95,18 @@ class Sujets extends Database{
     {
         return $this->Date_publication = $Date_publication;
     }
-
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+    public function setPseudo($pseudo)
+    {
+        return $this->pseudo= $pseudo;
+    }
 
     public function postsujet(){
 
-        $insert = $this->pdo->prepare("INSERT INTO articles (Titre_sujet,ID_utilisateur)
+        $insert = $this->pdo->prepare("INSERT INTO sujets (Titre_sujet,ID_utilisateur)
         VALUES(?,?) ");
 
         $insert->bindValue(1, $this->Titre_sujet, PDO::PARAM_STR);
@@ -106,12 +114,6 @@ class Sujets extends Database{
         $insert->execute();
     }
 
-    // public function affichage(){
-    //     $requete = $this->pdo->prepare("SELECT ID_sujet,Titre_sujet,avatar,pseudo,ID_utilisateur  FROM sujets INNER JOIN utilisateurs ON sujets.ID_utilisateur = utilisateurs.ID_utilisateur LIMIT 6 OFFSET ?");
-    //     $requete->bindValue(1, $this->offset, PDO::PARAM_INT);
-    //     $requete->execute();
-    //     return $requete->fetchAll(PDO::FETCH_ASSOC);
-    // }
 
     public function affichage(){
         $requete = $this->pdo->prepare("SELECT sujets.ID_sujet, sujets.Titre_sujet, utilisateurs.avatar, utilisateurs.pseudo, sujets.ID_utilisateur FROM sujets INNER JOIN utilisateurs ON sujets.ID_utilisateur = utilisateurs.ID_utilisateur LIMIT 6 OFFSET ?");
@@ -126,10 +128,29 @@ class Sujets extends Database{
     }
 
     public function sujetsId(){
-        $requete = $this->pdo->prepare("SELECT ID_sujet,Titre_sujet,avatar, pseudo  FROM sujets INNER JOIN utilisateurs ON ID_utilisateur = utilisateurs.ID_utilisateur WHERE ID_sujet = ? ");
+        $requete = $this->pdo->prepare("SELECT sujets.ID_sujet, sujets.Titre_sujet, utilisateurs.avatar, utilisateurs.pseudo FROM sujets INNER JOIN utilisateurs ON sujets.ID_utilisateur = utilisateurs.ID_utilisateur WHERE sujets.ID_sujet = ? ");
         $requete->bindValue(1, $this->ID_sujet, PDO::PARAM_INT);
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
+    
+    // public function AjouterCommentaire(){
+    //     $insComm = $this->pdo->prepare("INSERT INTO commentaires (Contenu_commentaire,ID_utilisateur,ID_sujet) VALUES(?,?,?");
+    //     $insComm->bindValue(1, $this->Contenu_commentaire, PDO::PARAM_STR);
+    //     $insComm->bindValue(2, $this->ID_utilisateur, PDO::PARAM_INT);
+    //     $insComm->bindValue(3, $this->ID_sujet, PDO::PARAM_INT);
+    //     $insComm->execute();
+    // }
+
+    public function AjouterCommentaire()
+{
+    $insComm = $this->pdo->prepare("INSERT INTO commentaires (Contenu_commentaire, ID_utilisateur, ID_sujet)
+        SELECT ?, utilisateurs.ID_utilisateur, ? FROM utilisateurs
+        WHERE utilisateurs.pseudo = ?");
+    $insComm->bindValue(1, $this->Contenu_commentaire, PDO::PARAM_STR);
+    $insComm->bindValue(2, $this->ID_sujet, PDO::PARAM_INT);
+    $insComm->bindValue(3, $this->pseudo, PDO::PARAM_STR);
+    $insComm->execute();
+}
 
 }

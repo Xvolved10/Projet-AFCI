@@ -83,7 +83,10 @@ include("Models/sujets.php")
   } else if (isset($_GET["NouveauSujet"])) {
     include_once("controllers/NouveauSujetctrl.php");
     include_once("views/NouveauSujet.php");
-  }
+  } else if (isset($_GET["Sujet"])) {
+    include_once("controllers/Sujetctrl.php");
+    include_once("views/Sujet.php");
+  } 
   
 
   ?>

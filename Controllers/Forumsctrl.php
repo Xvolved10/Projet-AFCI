@@ -18,9 +18,7 @@ $offset = ($currentPage - 1) * 8;
 $listeArticle->setOffset($offset);
 $liste = $listeArticle->affichage();
 // var_dump($numberDePage);
-if (isset($_POST["btnArticle"])) {
-    header("Location:index.php?Commentaire&Articles=" . $_POST["btnArticle"]);
-}
-if (isset($_POST["nouveausujet"])) {
+if (isset($_POST["NouveauSujet"])) {
     header("Location:index.php?NouveauSujet");
+    exit(); 
 }

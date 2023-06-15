@@ -347,8 +347,8 @@ body iframe {
 }
 
 .img_background {
-  width: 100%;
-  height: 40em;
+  width: 50000px;
+  height: auto;
   max-width: 100%;
 }
 
@@ -767,19 +767,6 @@ margin-top: 1em;
 width: 100%;
 }
 
-/* .profil-titre {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #ffbb00;
-  text-align: center;
-  font-size: 4em;
-} */
 
 .profil {
   border: 5px solid #ffbb00;
@@ -811,12 +798,279 @@ width: 100%;
 
 
 
+/* Mentions Légales et CGU */
+/* Titre de la page */
+.legal-box h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Titres des sections */
+.legal-box h2 {
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: red;
+  text-align: center;
+}
+
+.legal-box h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Contenu des sections */
+.legal-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Liens hypertextes */
+.legal-box a {
+  color: #0072c6;
+  text-decoration: none;
+}
+
+.legal-box a:hover {
+  text-decoration: underline;
+}
+
+/* Encadré pour les CGU et les mentions légales */
+.legal-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+.legal-box 
+.legal-box h2 {
+  font-size: 24px;
+}
+
+.legal-box h3 {
+  font-size: 18px;
+}
+
+.legal-box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.tout {
+  /* text-align: center; */
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+
+/* Page Login */
 
 
 
+.h1-Login {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffbb00;
+}
+
+.form-Login {
+  width: 100%;
+}
+
+.label-Login {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-Login {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.submit-Login {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffbb00;
+  color: black;
+  border: black solid 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alert-Login {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.alert-Login p {
+  margin-bottom: 0;
+}
+
+/* Page Forum */
+/* Styles pour la classe bclArticle */
+.bclArticle {
+  background-color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Styles pour la classe img_accueil */
+.img_accueil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Styles pour la classe article_accueil */
+.article_accueil {
+  color: #333;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Styles pour la classe pseudo_accueil */
+.pseudo_accueil {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Styles pour la classe date_accueil */
+.date_accueil {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: right; /* Alignement à droite */
+}
+/* Styles pour la classe author_info */
+.author_info {
+  display: flex;
+  align-items: center;
+}
+
+.author_info .pseudo_accueil {
+  margin-right: 5px;
+}
+
+.author_info .date_accueil {
+  color: #666;
+  font-size: 14px;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+/* Styles pour la classe supprimer_comm */
+.supprimer_comm {
+  background-color: #ff0000;
+  color: black;
+  border: #000000 solid 2px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Styles pour la classe nouveau_sujet */
+.nouveau_sujet {
+  background-color: #ffbb00;
+  color: black;
+  border: #000000 solid 2px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styles pour la classe pagination-link */
+.pagination-link {
+  color: #333;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.pagination-link:hover {
+  text-decoration: underline;
+}
+/* Styles pour la classe link-style */
+.link-style {
+  display: inline-block;
+  color: #ffbb00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-style:hover {
+  text-decoration: underline;
+}
 
 
+/* Formulaire Nouveau Sujet */
+/* Styles pour la classe main-container */
+.main-container {
+  border: 2px solid black;
+  margin-top: 10%;
+  margin-inline: 25%;
+  text-align: center;
+  font-size: x-large;
+  background-color: #333;
+  color: #fff;
+}
 
+/* Styles pour la classe form-title */
+.form-title {
+  color: #ffbb00;
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Styles pour la classe form-error */
+.form-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Styles pour la classe form-textarea */
+.form-textarea {
+  background-color: #555;
+  color: #fff;
+  width: 75%;
+  height: 150px;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Styles pour la classe form-submit */
+.form-submit {
+  background-color: #ffbb00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 3%;
+}
+
+/* Styles pour la classe form-link */
+.form-link {
+  display: inline-block;
+  color: #ffbb00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
 
 /* Test */
 

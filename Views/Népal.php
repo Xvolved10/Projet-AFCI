@@ -6,10 +6,7 @@
             <img class="img_background" src="image/Cartes/Népal/thiago-klafke-screenshot-16-12-23-10-54-34-000.jpg" alt="Népal">
             <div class="overlay">
                 <h1>Népal</h1>
-                <!-- <p>Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</p> -->
                 <div class="icones">
-                    <!-- <img src="image/1563473137_837161.png">
-                    <p>Dégats</p> -->
                     <img src="image/227.jpg">
                     <p>Monastère, Népal, Himalaya</p>
                 </div>

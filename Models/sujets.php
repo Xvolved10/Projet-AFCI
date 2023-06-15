@@ -10,7 +10,7 @@ class Sujets extends Database{
     private $offset ;
     private $ID_commentaire;
     private $Contenu_commentaire;	
-    private $Date_publication;
+    private $Date_creation;
     private $pseudo;
 
    
@@ -87,13 +87,13 @@ class Sujets extends Database{
         return $this->Contenu_commentaire = $Contenu_commentaire;
     }
 
-    public function getDate_publication()
+    public function getDate_creation()
     {
-        return $this->Date_publication;
+        return $this->Date_creation;
     }
-    public function setDate_publication($Date_publication)
+    public function setDate_creation($Date_creation)
     {
-        return $this->Date_publication = $Date_publication;
+        return $this->Date_creation = $Date_creation;
     }
     public function getPseudo()
     {
@@ -116,11 +116,16 @@ class Sujets extends Database{
 
 
     public function affichage(){
-        $requete = $this->pdo->prepare("SELECT sujets.ID_sujet, sujets.Titre_sujet, utilisateurs.avatar, utilisateurs.pseudo, sujets.ID_utilisateur FROM sujets INNER JOIN utilisateurs ON sujets.ID_utilisateur = utilisateurs.ID_utilisateur LIMIT 6 OFFSET ?");
+        $requete = $this->pdo->prepare("SELECT sujets.ID_sujet, sujets.Titre_sujet,sujets.Date_creation, utilisateurs.avatar, utilisateurs.pseudo, sujets.ID_utilisateur 
+                                       FROM sujets 
+                                       INNER JOIN utilisateurs ON sujets.ID_utilisateur = utilisateurs.ID_utilisateur 
+                                       ORDER BY sujets.Date_creation DESC 
+                                       LIMIT 6 OFFSET ?");
         $requete->bindValue(1, $this->offset, PDO::PARAM_INT);
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
+    
     
     public function numberPage(){
         $requete = $this->pdo->query("SELECT COUNT(ID_sujet)/8 nbPage FROM sujets");

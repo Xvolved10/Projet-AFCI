@@ -1,56 +1,38 @@
-<!-- <body>
+<body class="body Login">
     <div class="image-text">
-        <img class="img_background" src="image/1600_Ashe.jpg" alt="Ashe">
-        <div class="overlay">
-            <h1>Ashe</h1>
-            <p>Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</p>
-            <div class="icones">
-                <img src="image/1563473137_837161.png">
-                <p>Dégats</p>
-                <img src="image/227.jpg">
-                <p>Gorge Deadlock, Arizona, États-Unis</p>
-            </div>
-        </div>
-    </div> -->
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-    <div>
-        <h2>Inscription</h2>
-        <form method="post" id="loginForm">
-            <label for="username">Adresse Email :</label>
-            <input type="text" name="email" placeholder="Votre adresse email">
+        <img class="img_background" src="image/banniere (1).png">
+    </div>
+    <div class="container div-Login">
+        <h1 class="h1-Login">Inscription</h1>
+        <form method="post" id="loginForm" class="form-Login">
+            <label for="username" class="label-Login">Adresse Email :</label>
+            <input type="text" name="email" placeholder="Votre adresse email" class="input-Login">
             <?php
             if (isset($error["email"])) { ?>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["email"]; ?></p>
                 </div>
             <?php } ?><br><br>
 
-            <label for="password">Mot de passe :</label>
-            <input type="password" name="MotDepasse" placeholder="Votre mot de passe">
+            <label for="password" class="label-Login">Mot de passe :</label>
+            <input type="password" name="MotDepasse" placeholder="Votre mot de passe" class="input-Login">
             <?php
             if (isset($error["MotDepasse"])) { ?>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["MotDepasse"]; ?></p>
                 </div>
             <?php } ?><br><br>
 
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" name="pseudo" placeholder="Votre Pseudo">
+            <label for="pseudo" class="label-Login">Pseudo :</label>
+            <input type="text" name="pseudo" placeholder="Votre Pseudo" class="input-Login">
             <?php
             if (isset($error["pseudo"])) { ?>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["pseudo"]; ?></p>
                 </div>
             <?php } ?>
 
-            <input type="submit" name="Inserer" value="Créer un compte">
-            <input type="submit" name="seconnecter" value="Se connecter">
+            <input type="submit" name="Inserer" value="Créer un compte" class="submit-Login">
+            <input type="submit" name="seconnecter" value="Se connecter" class="submit-Login">
         </form>
-    </div>
     </div>

@@ -86,6 +86,8 @@ include("Models/sujets.php")
   } else if (isset($_GET["Sujet"])) {
     include_once("controllers/Sujetctrl.php");
     include_once("views/Sujet.php");
+  } else if (isset($_GET["MentionsLégales"])) {
+    include_once("views/Mentions_Légales_CGU.php");
   } 
   
 
@@ -115,10 +117,10 @@ include("Models/sujets.php")
           <h3 class="liensutiles">Liens utiles</h3>
           <ul>
 
-            <li><a class="a_footer" href="#">Héros</a></li>
-            <li><a class="a_footer" href="#">Cartes</a></li>
-            <li><a class="a_footer" href="#">Forums</a></li>
-            <li><a class="a_footer" href="#">Mentions Légales</a></li>
+            <li><a class="a_footer" href="index.php?Héros">Héros</a></li>
+            <li><a class="a_footer" href="index.php?Cartes">Cartes</a></li>
+            <li><a class="a_footer" href="index.php?Forums">Forums</a></li>
+            <li><a class="a_footer" href="index.php?MentionsLégales">Mentions Légales</a></li>
 
           </ul>
         </div>

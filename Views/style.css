@@ -503,7 +503,9 @@ body iframe {
   font-weight: 500;
 
 }
-
+/* .btn:on-click{
+  background-color: #ffbb00;
+} */
 
 
 
@@ -515,8 +517,17 @@ body iframe {
   width: 100%;
   border: solid black 2px;
   /* margin-inline: 0; */
+  display: block;
+  margin-bottom: 20px;
 }
-
+.character[data-type]:not([data-type="tout"]) {
+  display: none;
+}
+.character_Home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* .character_Home{
 margin: 0;
 } */

@@ -1125,6 +1125,50 @@ function restaurerBouton() {
 }
 
 
+
+
+$(document).ready(function() {
+  // Afficher tous les personnages au chargement de la page
+  filterCharacters('tout');
+  
+  // Récupérer tous les boutons de filtre
+  var filterButtons = $('.btn-group .btn');
+
+  // Ajouter un gestionnaire d'événement à chaque bouton
+  filterButtons.on('click', function() {
+    var filterValue = $(this).text().toLowerCase();
+    filterCharacters(filterValue);
+    scrollToCharacterSection();
+  });
+
+  // Fonction pour filtrer les personnages en fonction du type
+  function filterCharacters(type) {
+    var characters = $('.character');
+
+    // Animation de transition des héros
+    characters.fadeOut(400, function() {
+      // Afficher ou masquer les personnages en fonction du type sélectionné
+      if (type === 'tout') {
+        characters.fadeIn(400);
+      } else {
+        characters.each(function() {
+          if ($(this).data('type') === type) {
+            $(this).fadeIn(400);
+          } else {
+            $(this).fadeOut(400);
+          }
+        });
+      }
+    });
+  }
+
+  // Fonction pour faire défiler jusqu'à la section des personnages
+  function scrollToCharacterSection() {
+    var characterSection = $('#characterSection');
+    $('html, body').animate({ scrollTop: characterSection.offset().top }, 800);
+  }
+});
+
 // // JS Pop-up connexion
 
 // document.getElementById("loginButton").addEventListener("click", function() {

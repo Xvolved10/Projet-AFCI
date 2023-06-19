@@ -9,4 +9,5 @@ if (isset($_POST["ajoutComm"])) {
     $commentaire->setID_utilisateur($_SESSION["ID_utilisateur"]);
     $commentaire->setID_sujet($_GET["Sujet"]);
     $commentaire->AjouterCommentaire();
+    $commentaire->getCommentaires();
 }

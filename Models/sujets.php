@@ -4,13 +4,13 @@
 class Sujets extends Database{
     private $ID_sujet;
     private $Titre_sujet;
-    private $Date_dernier_message;
+    private $Date_creation;
     private $ID_utilisateur;
     private $ID_forum;
     private $offset ;
     private $ID_commentaire;
     private $Contenu_commentaire;	
-    private $Date_creation;
+    private $Date_publication;
     private $pseudo;
 
    
@@ -32,15 +32,15 @@ class Sujets extends Database{
     {
         return $this->Titre_sujet = $Titre_sujet;
     }
+    public function getDate_creation()
+    {
+        return $this->Date_creation;
+    }
+    public function setDate_creation($Date_creation)
+    {
+        return $this->Date_creation = $Date_creation;
+    }
 
-    public function getDate_dernier_message()
-    {
-        return $this->Date_dernier_message;
-    }
-    public function setDate_dernier_message($Date_dernier_message)
-    {
-        return $this->Date_dernier_message = $Date_dernier_message;
-    }
 
     public function getID_utilisateur()
     {
@@ -86,15 +86,15 @@ class Sujets extends Database{
     {
         return $this->Contenu_commentaire = $Contenu_commentaire;
     }
+    public function getDate_publication()
+    {
+        return $this->Date_publication;
+    }
+    public function setDate_publication($Date_publication)
+    {
+        return $this->Date_publication = $Date_publication;
+    }
 
-    public function getDate_creation()
-    {
-        return $this->Date_creation;
-    }
-    public function setDate_creation($Date_creation)
-    {
-        return $this->Date_creation = $Date_creation;
-    }
     public function getPseudo()
     {
         return $this->pseudo;
@@ -139,23 +139,24 @@ class Sujets extends Database{
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
     
-    // public function AjouterCommentaire(){
-    //     $insComm = $this->pdo->prepare("INSERT INTO commentaires (Contenu_commentaire,ID_utilisateur,ID_sujet) VALUES(?,?,?");
-    //     $insComm->bindValue(1, $this->Contenu_commentaire, PDO::PARAM_STR);
-    //     $insComm->bindValue(2, $this->ID_utilisateur, PDO::PARAM_INT);
-    //     $insComm->bindValue(3, $this->ID_sujet, PDO::PARAM_INT);
-    //     $insComm->execute();
-    // }
-
-    public function AjouterCommentaire()
+public function AjouterCommentaire()
 {
-    $insComm = $this->pdo->prepare("INSERT INTO commentaires (Contenu_commentaire, ID_utilisateur, ID_sujet)
-        SELECT ?, utilisateurs.ID_utilisateur, ? FROM utilisateurs
-        WHERE utilisateurs.pseudo = ?");
+    $insComm = $this->pdo->prepare("INSERT INTO commentaires (Contenu_commentaire, ID_utilisateur, ID_sujet) VALUES (?, ?, ?)");
     $insComm->bindValue(1, $this->Contenu_commentaire, PDO::PARAM_STR);
-    $insComm->bindValue(2, $this->ID_sujet, PDO::PARAM_INT);
-    $insComm->bindValue(3, $this->pseudo, PDO::PARAM_STR);
+    $insComm->bindValue(2, $this->ID_utilisateur, PDO::PARAM_INT);
+    $insComm->bindValue(3, $this->ID_sujet, PDO::PARAM_INT);
     $insComm->execute();
+}
+public function getCommentaires()
+{
+    $requete = $this->pdo->prepare("SELECT commentaires.ID_commentaire, commentaires.Contenu_commentaire, commentaires.Date_publication, utilisateurs.pseudo
+                                   FROM commentaires
+                                   INNER JOIN utilisateurs ON commentaires.ID_utilisateur = utilisateurs.ID_utilisateur
+                                   WHERE commentaires.ID_sujet = ?
+                                   ORDER BY commentaires.Date_publication ASC");
+    $requete->bindValue(1, $this->ID_sujet, PDO::PARAM_INT);
+    $requete->execute();
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
 }
 
 }

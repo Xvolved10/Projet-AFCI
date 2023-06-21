@@ -192,4 +192,34 @@ class Sujets extends Database
     $supprimerSujet->execute();
 }
 
+public function getCommentaireByID($commentaireID)
+{
+    $requete = $this->pdo->prepare("SELECT * FROM commentaires WHERE ID_commentaire = ?");
+    $requete->bindValue(1, $commentaireID, PDO::PARAM_INT);
+    $requete->execute();
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
+public function supprimerCommentaire($commentaireID)
+{
+    // Vérifier si l'utilisateur a le droit de supprimer le commentaire
+    $comment = $this->getCommentaireByID($commentaireID);
+    
+    if ($comment && (isset($_SESSION["ID_utilisateur"]) && $_SESSION["ID_utilisateur"] == $comment['ID_utilisateur'] || isset($_SESSION["ID_role"]) && $_SESSION["ID_role"] == 1)) {
+        // L'utilisateur a le droit de supprimer le commentaire
+        
+        // Supprimer le commentaire de la base de données
+        $requete = $this->pdo->prepare("DELETE FROM commentaires WHERE ID_commentaire = ?");
+        $requete->bindValue(1, $commentaireID, PDO::PARAM_INT);
+        $requete->execute();
+        
+        // Retourner un indicateur de succès
+        return true;
+    } else {
+        // L'utilisateur n'a pas le droit de supprimer le commentaire
+        
+        // Retourner un indicateur d'échec
+        return false;
+    }
+}
 }

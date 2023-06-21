@@ -1,27 +1,41 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <body class="body">
     <br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="commentaire">
-        <h1>Sujet</h1>
-        <p><?php echo $monArticle['Titre_sujet']; ?></p>
-        <p><?php echo $monArticle['pseudo']; ?></p>
+        <h1 class="bclSujet">Sujet</h1>
+        <p class="articleSujet"><?php echo $monArticle['Titre_sujet']; ?></p>
+        <p class="pseudoSujet"><?php echo $monArticle['pseudo']; ?></p>
 
-        <h2>Commentaires liés au sujet</h2>
+        <h2 class="bclSujet">Commentaires liés au sujet</h2>
         <?php if (!empty($commentaires)) {
             foreach ($commentaires as $comment) { ?>
-                <p>Pseudo: <?php echo $comment['pseudo']; ?></p>
-                <p>Contenu: <?php echo $comment['Contenu_commentaire']; ?></p>
-                <p>Date de publication: <?php echo $comment['Date_publication']; ?></p>
+                <p class="pseudoSujet">Pseudo: <?php echo $comment['pseudo']; ?></p>
+                <p class="articleSujet">Contenu: <?php echo $comment['Contenu_commentaire']; ?></p>
+                <p class="dateSujet">Date de publication: <?php echo $comment['Date_publication']; ?></p>
+                <?php
+                if (isset($_SESSION["ID_utilisateur"], $comment['ID_utilisateur']) && isset($_SESSION["ID_role"]) && ($_SESSION["ID_utilisateur"] == $comment['ID_utilisateur'] || $_SESSION["ID_role"] == 1)) {
+                ?>
+                    <div>
+                        <form action="" method="post">
+                            <input type="hidden" name="commentaireID" value="<?php echo $comment['ID_commentaire']; ?>">
+                            <button type="submit" name="supprimer_commentaire" class="supprimerCommentaire">Supprimer</button>
+                        </form>
+                    </div>
+                <?php
+                }
+                ?>
                 <hr>
         <?php }
         } else {
-            echo "Aucun commentaire trouvé.";
+            echo "<p class='articleSujet'>Aucun commentaire trouvé.</p>";
         } ?>
 
-        <form action="" method="post">
-            <textarea class="textcommentaire" name="commentaire"></textarea>
-            <button type="submit" name="ajoutComm">Ajouter un commentaire</button>
-        </form>
     </div>
 
     <?php if ($currentPage > 1) { ?>
@@ -44,4 +58,9 @@
     if ($currentPage <= $numberDePage) { ?>
         <a href="index.php?Sujet=<?= $_GET['Sujet'] ?>&page=<?= $currentPage + 1 ?>" class="pagination-link">Suivante</a>
     <?php } ?>
+    <form action="" method="post">
+            <textarea class="textSujet" name="commentaire"></textarea>
+            <button type="submit" name="ajoutComm" class="nouveauComm">Ajouter un commentaire</button>
+        </form>
+
 </body>

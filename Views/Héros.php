@@ -42,7 +42,7 @@
 
 
 
-  <div class="container-fluid column">
+  <!-- <div class="container-fluid column">
     <div class="btn-group" role="group" aria-label="Basic  example">
       <button type="button" class="btn">Tout</button>
       <button type="button" class="btn">Tank</button>
@@ -51,7 +51,7 @@
       <br><br><br>
     </div>
 
-  </div>
+  </div> -->
 
 
 

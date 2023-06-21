@@ -1,6 +1,9 @@
 <?php
-$ajoue = new Utilisateurs();
-// Condition bouton connexion
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$ajoue = new Utilisateurs();// Condition bouton connexion
 
 
 if (isset($_POST["Connexion"])) {

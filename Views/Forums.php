@@ -20,9 +20,12 @@
                 </div>
                 <div>
                     <?php
-                    if (isset($_SESSION["ID_utilisateur"]) && !empty($_SESSION["ID_utilisateur"]) && $_SESSION["ID_role"] == 1) {
-                        if ($_SESSION["ID_utilisateur"] == $value["ID_utilisateur"]) { ?>
-                            <button type="submit" name="SupprComm" value="<?php echo $value["ID_utilisateur"] ?>" class="supprimer_comm">Supprimer</button>
+                    if (isset($_SESSION["ID_utilisateur"]) && !empty($_SESSION["ID_utilisateur"])) {
+                        if ($_SESSION["ID_utilisateur"] == $value["ID_utilisateur"] || $_SESSION["ID_role"] == 1) { ?>
+                            <form method="POST">
+                                <input type="hidden" name="SupprSujet" value="<?php echo $value["ID_sujet"] ?>">
+                                <button type="submit" class="supprimer_comm">Supprimer</button>
+                            </form>
                     <?php }
                     } ?>
                 </div>
@@ -38,12 +41,12 @@
 
     <?php if ($currentPage > 1) { ?>
         <a href="index.php?Forums=<?= $currentPage - 1  ?>" class="pagination-link">Précédent</a>
-    <?php }
+        <?php }
 
     for ($page = 2; $page >= 1; $page--) {
         if ($currentPage - $page >= 1) { ?>
             <a href="index.php?Forums=<?= $currentPage - $page ?>" class="pagination-link"><?= $currentPage - $page ?></a>
-        <?php }
+    <?php }
     } ?>
 
     <a href="index.php?Forums=<?= $currentPage ?>" class="pagination-link"><?= $currentPage ?></a>

@@ -131,7 +131,7 @@ include("Models/sujets.php")
         <div class="col-md-4">
           <h3>Contactez-nous</h3>
           <p>Vous pouvez nous contacter à l'adresse e-mail suivante :</p>
-          <a class="a_footer" href="OWLore.pro@gmail.com">OWLore.pro@gmail.com</a>
+          <a class="a_footer" href="mailto:maxime.debrie@hotmail.fr">OWLore.pro@gmail.com</a>
         </div>
         <div class="col-md-4">
           <a href="#"><img class="logoFooter" src="image/Frame 2.png" alt="Logo"></a>

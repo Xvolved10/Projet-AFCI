@@ -1,15 +1,13 @@
-<?php
-
-
+<?
 class Utilisateurs extends Database
 {
-    private $ID_utilisateur;
-    private $pseudo;
-    private $email;
-    private $MotDepasse;
-    private $Date_d_inscription;
-    private $ID_role;
-    private $avatar;
+    private $ID_utilisateur; // Identifiant de l'utilisateur
+    private $pseudo; // Pseudonyme de l'utilisateur
+    private $email; // Adresse email de l'utilisateur
+    private $MotDepasse; // Mot de passe de l'utilisateur
+    private $Date_d_inscription; // Date d'inscription de l'utilisateur
+    private $ID_role; // Identifiant du rôle de l'utilisateur
+    private $avatar; // Avatar de l'utilisateur
 
     public function getID_utilisateur()
     {
@@ -73,7 +71,7 @@ class Utilisateurs extends Database
         return $this->avatar = $avatar;
     }
 
-    // Requete Création Compte
+    // Requête de création de compte
     public function insert()
     {
         $insertion = $this->pdo->prepare("INSERT INTO utilisateurs(pseudo,email,MotDepasse)
@@ -84,7 +82,7 @@ class Utilisateurs extends Database
         $insertion->execute();
     }
 
-    // Requete Connexion
+    // Requête de connexion
     public function connexion()
     {
         $infosUser = $this->pdo->prepare("SELECT `ID_utilisateur`, `email`, `MotDepasse`, `pseudo`, `ID_role` FROM `utilisateurs` WHERE email = ?");
@@ -96,10 +94,9 @@ class Utilisateurs extends Database
     }
 
 
-    // Requete Profil Affichage
+    // Requête d'affichage du profil
     public function select()
     {
-        echo $this->ID_utilisateur;
 
         $infosUsers = $this->pdo->prepare("SELECT `ID_utilisateur`, `email`, `MotDepasse`, `pseudo`, `Date_d_inscription`, `ID_role` 
     FROM `utilisateurs` 
@@ -112,7 +109,7 @@ class Utilisateurs extends Database
     }
 
 
-    // Requete Verification
+    // Requête de vérification
     public function VerifMail_Pseudo()
     {
         $nbuser = $this->pdo->prepare("SELECT email,pseudo FROM utilisateurs  WHERE email = ? OR pseudo = ?");
@@ -123,7 +120,7 @@ class Utilisateurs extends Database
         return $nbuser->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Requete Suppression
+    // Requête de suppression
     public function delete()
     {
         $delete = $this->pdo->prepare("DELETE FROM utilisateurs WHERE ID_utilisateur = ?");

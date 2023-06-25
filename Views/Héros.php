@@ -4,14 +4,14 @@
 
   <section>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+      <!-- Indicateurs -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
 
-      <!-- Wrapper for slides -->
+      <!-- Contenu des diapositives -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="header-image2 img-fluid" id="image-id" src="image/ow-heroes.png" alt="OW_heroes">
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <!-- Left and right controls -->
+      <!-- Contrôles de navigation -->
       <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
@@ -35,12 +35,6 @@
       </a>
     </div>
   </section>
-
-
-
-
-
-
 
   <!-- <div class="container-fluid column">
     <div class="btn-group" role="group" aria-label="Basic  example">
@@ -52,8 +46,6 @@
     </div>
 
   </div> -->
-
-
 
   <!-- Section Personnage -->
   <section>
@@ -86,7 +78,7 @@
           array("Orisa", "1600_Orisa.jpg", "tank"),
           array("Pharah", "1600_Pharah.jpg", "dégâts"),
           array("Ramattra", "1600_Ramattra.jpg", "tank"),
-          array("Reine des Junkers", "1600_Junker_Queen.jpg","tank"),
+          array("Reine des Junkers", "1600_Junker_Queen.jpg", "tank"),
           array("Reinhardt", "1600_Reinhardt.jpg", "tank"),
           array("Sigma", "1600_Sigma.jpg", "tank"),
           array("Sojourn", "1600_Sojourn.jpg", "dégâts"),

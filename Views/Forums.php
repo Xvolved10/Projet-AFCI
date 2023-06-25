@@ -1,8 +1,12 @@
 <body class="body">
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="image-forum">
+        <img class="img_background" src="image/banniere (1).png">
+    </div>
+
     <form method="post">
         <?php
         foreach ($liste as $key => $value) {
+            // Afficher l'avatar de l'utilisateur
             echo $value['avatar'];
         ?>
             <div class="bclArticle">
@@ -15,11 +19,12 @@
                     </h2>
                     <div class="author_info">
                         <h3 class="pseudo_accueil"> <?php echo $value['pseudo'] ?></h3>
-                        <span class="date_accueil"> <?php echo $value['Date_creation'] ?></span>
+                        <p class="date_accueil"> <?php echo $value['Date_creation'] ?></p>
                     </div>
                 </div>
                 <div>
                     <?php
+                    // Vérifier si l'utilisateur est connecté et s'il est l'auteur du sujet ou s'il a le rôle d'administrateur
                     if (isset($_SESSION["ID_utilisateur"]) && !empty($_SESSION["ID_utilisateur"])) {
                         if ($_SESSION["ID_utilisateur"] == $value["ID_utilisateur"] || $_SESSION["ID_role"] == 1) { ?>
                             <form method="POST">
@@ -37,28 +42,35 @@
         <input type="submit" value="Nouveau Sujet" name="NouveauSujet" class="nouveau_sujet">
     </form>
 
-    <br>
+    <div class="pagination-container">
+        <?php
+        // Vérifier s'il existe une page précédente
+        if ($currentPage > 1) { ?>
+            <a href="index.php?Forums=<?= $currentPage - 1  ?>" class="pagination-link">Précédent</a>
+            <?php }
 
-    <?php if ($currentPage > 1) { ?>
-        <a href="index.php?Forums=<?= $currentPage - 1  ?>" class="pagination-link">Précédent</a>
+        // Afficher les pages précédentes (2 maximum)
+        for ($page = 2; $page >= 1; $page--) {
+            if ($currentPage - $page >= 1) { ?>
+                <a href="index.php?Forums=<?= $currentPage - $page ?>" class="pagination-link"><?= $currentPage - $page ?></a>
         <?php }
+        } ?>
 
-    for ($page = 2; $page >= 1; $page--) {
-        if ($currentPage - $page >= 1) { ?>
-            <a href="index.php?Forums=<?= $currentPage - $page ?>" class="pagination-link"><?= $currentPage - $page ?></a>
-    <?php }
-    } ?>
+        <!-- Afficher la page actuelle -->
+        <a href="index.php?Forums=<?= $currentPage ?>" class="current-page"><?= $currentPage ?></a>
 
-    <a href="index.php?Forums=<?= $currentPage ?>" class="pagination-link"><?= $currentPage ?></a>
+        <?php
+        // Afficher les pages suivantes (2 maximum)
+        for ($pagePlus = 1; $pagePlus <= 2; $pagePlus++) {
+            if ($currentPage + $pagePlus <= $numberDePage) { ?>
+                <a href="index.php?Forums=<?= $currentPage + $pagePlus ?>" class="pagination-link"><?= $currentPage + $pagePlus ?></a>
+        <?php }
+        } ?>
 
-    <?php
-    for ($pagePlus = 1; $pagePlus <= 2; $pagePlus++) {
-        if ($currentPage + $pagePlus <= $numberDePage) { ?>
-            <a href="index.php?Forums=<?= $currentPage + $pagePlus ?>" class="pagination-link"><?= $currentPage + $pagePlus ?></a>
-    <?php }
-    } ?>
-
-    <?php if ($currentPage < $numberDePage) { ?>
-        <a href="index.php?Forums=<?= $currentPage + 1 ?>" class="pagination-link">Suivante</a>
-    <?php } ?>
+        <?php
+        // Vérifier s'il existe une page suivante
+        if ($currentPage < $numberDePage) { ?>
+            <a href="index.php?Forums=<?= $currentPage + 1 ?>" class="pagination-link">Suivante</a>
+        <?php } ?>
+    </div>
 </body>

@@ -1,13 +1,12 @@
 <?php
 
-
-class Commentaires extends Database{
-    private $ID_commentaire;
-    private $Contenu_commentaire;
-    private $Date_publication;
-    private $ID_utilisateur;
-    private $ID_sujet;
-   
+class Commentaires extends Database
+{
+    private $ID_commentaire; // Identifiant du commentaire
+    private $Contenu_commentaire; // Contenu du commentaire
+    private $Date_publication; // Date de publication du commentaire
+    private $ID_utilisateur; // Identifiant de l'utilisateur associé au commentaire
+    private $ID_sujet; // Identifiant du sujet associé au commentaire
 
     public function getID_commentaire()
     {

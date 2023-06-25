@@ -1,82 +1,71 @@
+/* Réinitialiser les marges, les paddings et la boîte de modélisation pour tous les éléments */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
+/* Redimensionner automatiquement les images dans la classe "header-image2" */
 .header-image2 {
   width: auto;
 }
 
-
-
-/* Body  */
+/* Style du corps de la page */
 .body {
   background-color: #7183bb;
   width: 100%;
   align-items: flex-start;
-  /* overflow-x: auto; */
 }
 
-
+/* Style des titres de niveau 4 (h4) dans le corps de la page */
 body h4 {
   color: white;
 }
 
+/* Style du texte des origines */
 .Origines_text {
   color: white;
   font-weight: bold;
-  /* justify-content: center;
-    align-items: center;
-    text-align: center; */
 }
 
+/* Style du titre "Origines" */
 .Origines {
   color: #ffbb00;
   font-size: 3rem;
-  /* border-bottom: 2px solid black; */
   font-style: italic;
   margin-bottom: 1em;
-
-  /* text-align: center; */
 }
 
+/* Style de la vidéo des origines */
 .Origine_video {
   width: 90%;
   height: 18.5em;
 }
 
+/* Style des paragraphes avec la classe "paragraphe2" */
 .paragraphe2 {
   stroke: black;
   font-size: 1.5rem;
   margin-bottom: 2em;
   cursor: default;
-
 }
 
-
-/* .paragraphe1 {
-    font-size: 2rem;
-} */
-
-
+/* Style des éléments en gras dans le corps de la page */
 body strong {
   text-align: center;
 }
 
+/* Style de l'image dans l'en-tête */
 .header-image {
   margin-top: 3em;
 }
 
-
-/* Début navbar */
+/* Style de la barre de navigation */
 nav {
   background-color: #ebeff4;
   height: 80px;
   display: flex;
   justify-content: center;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -89,10 +78,12 @@ nav {
   opacity: 0.7;
 }
 
+/* Style de la barre de navigation au survol */
 nav:hover {
   opacity: 1.0;
 }
 
+/* Style de la liste non ordonnée dans la barre de navigation */
 .ul_nav {
   display: flex;
   justify-content: space-between;
@@ -104,39 +95,40 @@ nav:hover {
   max-width: 1140px;
 }
 
+/* Style des éléments de la liste dans la barre de navigation */
 nav li {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
+/* Style du logo dans la barre de navigation */
 .logo {
   margin-right: auto;
-
 }
 
+/* Style du bouton de connexion dans la barre de navigation */
 .Btnconnexion {
   margin-left: auto;
   background-color: #65bdd1;
   border: solid black 1px;
   border-radius: 1em;
   height: auto;
-
-
 }
 
+/* Style au survol du bouton dans la barre de navigation */
 .btn:hover {
   background-color: #ffbb00;
   border-radius: 1em;
-
-
 }
 
+/* Style au survol du bouton de connexion dans la barre de navigation */
 .Btnconnexion:hover {
   background-color: #ffbb00;
   border-radius: 1em;
 }
 
+/* Style des liens dans la barre de navigation */
 nav a {
   color: black;
   text-decoration: none;
@@ -149,33 +141,33 @@ nav a {
   transition: all 0.3s ease;
 }
 
+/* Styles de la barre de navigation au survol */
 .Navigation:hover {
   background-color: #5AA8B9;
   color: #141414;
   border: solid black 1px;
 }
 
+/* Style de la bannière */
 .Banniere {
   width: 200px;
   height: auto;
 }
 
+/* Style du lien du logo */
 a.logo_link {
   padding: 0;
 }
 
-
-
-/* Assombrir la Navbar sur une image trop claire
+/* Style pour assombrir la barre de navigation sur une image trop claire */
+/*
 .dark-nav {
   background-color: #333;
   opacity: 0.9;
-} */
+}
+*/
 
-/* Fin navbar */
-
-/* Début Footer */
-
+/* Styles du pied de page */
 footer {
   background-color: #141414;
   color: #ffffff;
@@ -183,11 +175,9 @@ footer {
   font-size: 18px;
   line-height: 1.5;
   padding-bottom: 0;
-
 }
 
-/*  */
-
+/* Styles des sections d'images */
 .section_images {
   display: flex;
   flex-wrap: wrap;
@@ -196,12 +186,14 @@ footer {
   align-items: center;
 }
 
+/* Style du logo du footer */
 .logoFooter {
   margin-right: auto;
   height: auto;
   width: 250px;
 }
 
+/* Styles des colonnes dans le footer */
 .col-lg-4,
 .col-md-6,
 .col-sm-12,
@@ -209,24 +201,26 @@ footer {
   padding: 0 15px;
   margin-bottom: 30px;
   text-align: center;
-
 }
 
+/* Style du lien dans le footer */
 .classLienFooter {
   margin-left: auto;
-
 }
 
+/* Style des titres dans le footer */
 footer h3 {
   font-size: 24px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
+/* Style des paragraphes dans le footer */
 footer p {
   margin-bottom: 20px;
 }
 
+/* Style de la liste dans le footer */
 footer ul {
   list-style: none;
   margin: 0;
@@ -236,49 +230,47 @@ footer ul {
   width: 100%;
   justify-content: space-between;
   max-width: 1140px;
-
 }
 
+/* Style des liens dans le footer */
 .a_footer {
   color: white;
   text-decoration: none;
 }
 
+/* Style des titres h3 dans le footer */
 footer h3 {
   color: #ffbb00;
 }
 
+/* Style des images dans le footer */
 footer img {
   height: 50px;
   margin-left: 50px;
   margin-bottom: 1em;
-  /* margin-inline: 10em; */
-
 }
 
-
+/* Style de la première image dans le footer */
 footer img:first-child {
   margin-left: 0;
 }
 
+/* Style des liens au survol dans le footer */
 footer a:hover {
   color: #ffbb00;
 }
 
+/* Style des images au survol dans le footer */
 footer img:hover {
   opacity: 0.8;
-
 }
 
-/* Fin Footer */
-
-
-/* Début Page Personnage */
-
+/* Styles de la page des personnages */
 .image-text {
   margin-bottom: 3rem;
 }
 
+/* Styles de l'overlay au survol de l'image */
 .image-text .overlay {
   position: absolute;
   top: 0;
@@ -293,37 +285,41 @@ footer img:hover {
   opacity: 0;
   transition: opacity 0.5s;
   padding-left: 5%;
-
 }
 
+/* Styles au survol de l'overlay */
 .image-text:hover .overlay {
   opacity: 1;
 }
 
+/* Style du titre dans l'overlay */
 .image-text .overlay h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   color: #ffbb00;
 }
 
+/* Style du paragraphe dans l'overlay */
 .image-text .overlay p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
+/* Style des icônes dans l'overlay */
 .image-text .overlay .icones img {
   width: 50px;
   height: 50px;
   margin-right: 1rem;
 }
 
+/* Styles des icônes */
 .icones {
   text-align: left;
   justify-content: center;
   align-items: center;
-
 }
 
+/* Styles des iframes dans le body */
 body iframe {
   width: 40%;
   height: 20em;
@@ -331,30 +327,27 @@ body iframe {
   margin-right: 4%;
   margin-bottom: 5%;
   border: #141414 solid 5px;
-
 }
 
-/* Bd Personnage */
-
+/* Styles de la section des bandes dessinées */
 .section_bd {
   text-align: center;
-
 }
 
+/* Style de la bande dessinée */
 .bd {
   width: 35em;
   border: #000000 solid 3px;
 }
 
+/* Style de l'image de fond */
 .img_background {
   width: 50000px;
   height: auto;
   max-width: 100%;
 }
 
-
-
-/* Images */
+/* Styles des images dans les cartes */
 .card-image img {
   border: #000000 solid 3px;
   width: 100%;
@@ -362,8 +355,7 @@ body iframe {
   object-fit: cover;
 }
 
-/* Zoom Images */
-
+/* Styles pour le zoom des images */
 .image-zoom-overlay {
   position: fixed;
   top: 0;
@@ -384,17 +376,7 @@ body iframe {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Bouton Accordéon Histoire */
+/* Styles pour le bouton accordéon de l'histoire */
 .accordion-container {
   display: flex;
   flex-direction: column;
@@ -402,7 +384,6 @@ body iframe {
 }
 
 .accordion {
-  /* color: white; */
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -414,12 +395,8 @@ body iframe {
   align-items: center;
   font-size: 3rem;
   font-style: italic;
-  /* font-weight: bold; */
 }
 
-/* .accordion:hover {
-    background-color: #ccc;
-  } */
 .Histoire {
   font-size: 1.5rem;
   font-weight: bold;
@@ -430,7 +407,6 @@ body iframe {
 
 .panel {
   padding: 0 18px;
-  /* background-color: white; */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -477,17 +453,11 @@ body iframe {
   }
 }
 
-/* Fin Bouton Accordéon Histoire */
+/* Styles pour l'accueil */
 
-
-
-
-
-/* CSS Accueil */
-
+/* Styles du groupe de boutons */
 .btn-group {
   background-color: #5AA8B9;
-
   text-align: center;
   min-width: 100%;
   margin-left: 0;
@@ -496,119 +466,110 @@ body iframe {
   margin-bottom: 2em;
 }
 
+/* Styles des boutons */
 .btn {
-  /* background-color: #5AA8B9; */
-
   font-size: 1.5em;
   font-weight: 500;
-
 }
-/* .btn:on-click{
-  background-color: #ffbb00;
-} */
 
-
-
-
-/* Section Personnage Page d'accueil*/
+/* Styles des sections de personnages sur la page d'accueil */
 .character {
-  /* margin-top: 5em; */
   text-align: center;
   width: 100%;
   border: solid black 2px;
-  /* margin-inline: 0; */
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+/* Filtrage des personnages par type */
 .character[data-type]:not([data-type="tout"]) {
   display: none;
 }
+
+/* Styles des personnages sur la page d'accueil */
 .character_Home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 /* .character_Home{
 margin: 0;
-} */
+} /
+/ Commenté */
 
+/* Styles pour le conteneur d'image */
 .image-container {
   width: 100%;
   height: auto;
   margin: 0 auto;
   position: relative;
-
-}
-
-.image-container img {
+  }
+  
+  /* Styles pour les images à l'intérieur du conteneur */
+  .image-container img {
   max-width: 100%;
   height: auto;
-
-}
-
-.Heroes_names {
+  }
+  
+  /* Styles pour les noms des héros affichés sur les images */
+  .Heroes_names {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: rgb(65, 65, 65);
   color: #ffffff;
-  /* font-weight: 900;
-  font-weight: bold; */
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.Heroes_names h2 {
+  }
+  
+  .Heroes_names h2 {
   font-size: 1.3em;
   margin: 0;
   text-transform: uppercase;
-}
-
-.character a:hover .Heroes_names h2 {
+  }
+  
+  /* Styles pour les noms de héros au survol */
+  .character a:hover .Heroes_names h2 {
   color: #ffbb00;
-}
-
-
-@media screen and (min-width: 576px) {
-  .character {
-    flex-basis: calc(50% - 40px);
   }
-}
-
-@media screen and (min-width: 768px) {
+  
+  /* Media queries pour le design responsive */
+  @media screen and (min-width: 576px) {
   .character {
-    flex-basis: calc(33.33% - 40px);
+  flex-basis: calc(50% - 40px);
   }
-}
-
-@media screen and (min-width: 992px) {
+  }
+  
+  @media screen and (min-width: 768px) {
   .character {
-    flex-basis: calc(25% - 40px);
+  flex-basis: calc(33.33% - 40px);
   }
-}
-
-
-
-
-
-
-/* Css cartes */
-.header_cartes {
+  }
+  
+  @media screen and (min-width: 992px) {
+  .character {
+  flex-basis: calc(25% - 40px);
+  }
+  }
+  
+  /* Styles CSS pour les cartes de la carte */
+  .header_cartes {
   width: 100%;
   border-bottom: #000000 solid 3px;
-}
-
-.image_Cartes {
+  }
+  
+  .image_Cartes {
   width: 100%;
   height: 20em;
   object-fit: cover;
-}
-
-.maps_names {
-  /* position: absolute; */
+  }
+  
+  .maps_names {
   width: 100%;
   background-color: rgb(65, 65, 65);
   color: #ffffff;
@@ -617,269 +578,223 @@ margin: 0;
   justify-content: center;
   align-items: center;
   border-bottom: #000000 solid 2px;
-}
-
-.maps_names h2 {
+  }
+  
+  .maps_names h2 {
   font-size: 1.3em;
   margin: 0;
   text-transform: uppercase;
-}
-
-.maps a:hover .maps_names h2 {
+  }
+  
+  .maps a:hover .maps_names h2 {
   color: #ffbb00;
-}
-
-.link_maps {
+  }
+  
+  .link_maps {
   text-decoration: none;
-}
-
-
-
-/* CSS arrow to top */
-.back-to-top {
+  }
+  
+  /* Styles CSS pour la flèche "retour en haut" */
+  .back-to-top {
   display: none;
-  /* Cacher le bouton par défaut */
   position: fixed;
   bottom: 10px;
   right: 10px;
   border-radius: 50%;
   z-index: 9999;
   text-decoration: none;
-}
-
-.back-to-top .arrow {
+  }
+  
+  .back-to-top .arrow {
   font-size: 20px;
   height: 3em;
   width: 3em;
   background-color: #ffbb00;
   border-radius: 50%;
-
-
-}
-
-.show {
+  }
+  
+  .show {
   display: block !important;
-  /* Afficher le bouton lorsqu'il a la classe "show" */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Carte Page */
-.Personnages-liés {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.linked-characters {
-  color: #ffbb00;
-}
-
-.link-container {
+  }
+  
+  /* Styles CSS pour les personnages liés */
+  .linked-character-image {
   width: 100px;
   height: 100px;
-  /* margin-left: 0.5em; */
-  position: relative;
-}
-
-
-.placeholder-circle {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border: 2px dashed #ccc;
+  }
+  
+  .placeholder-circle {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
   overflow: hidden;
-}
-
-.placeholder-circle img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  }
+  
+  .link-container {
+  display: inline-block;
+  }
+  
+  .Personnages-liés {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .linked-characters {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-
-
-
-
-
-/* #loginPopup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30em;
-  height: 30em;
-  padding: 20px;
-  background-color: #ffbb00;
-  border: 3px solid black;
-}
-
-#loginForm{
-  width: 30em;
-  height: 20em;
-
-}
-
-.modal-content {
-  margin-top: 30px;
-} */
-
-/* #loginPopup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffbb00;
+  }
+  
+  /* Styles CSS pour le profil utilisateur */
+  .img-profil {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 20px;
-  background-color: #fff;
-  border: 3px solid black;
-}
-
-.submit {
-margin-top: 1em;
-} */
-
-.img-profil{
-width: 100%;
-}
-
-
-.profil {
+  }
+  
+  .profil {
   border: 5px solid #ffbb00;
-  background-color: #7183bb;
+  background-color: #333;
   padding: 20px;
   max-width: 300px;
   width: 100%;
   text-align: center;
-  margin: 0 auto; /* Ajoutez cette ligne pour centrer la div */
-}
-
-
-.deconnexion {
+  margin: 0 auto;
+  }
+  
+  .profil h3 {
+  color: #ffbb00;
+  }
+  
+  .profil p {
+  color: #0072c6;
+  font-size: larger;
+  }
+  
+  .deconnexion {
   background-color: red;
   color: white;
   height: 50px;
   padding-left: 1%;
-  padding-right: 1%
-}
-
-.supprimer {
+  padding-right: 1%;
+  }
+  
+  .supprimer {
   color: crimson;
   background-color: black;
   margin-bottom: 3%;
   height: 50px;
   padding-left: 1%;
-  padding-right: 1%
-}
-
-
-
-/* Mentions Légales et CGU */
-/* Titre de la page */
-.legal-box h1 {
+  padding-right: 1%;
+  }
+  
+  /* Confirmation de suppression */
+  .ConfirmSuppr {
+  border: 2px solid black;
+  margin-inline: 25%;
+  text-align: center;
+  font-size: x-large;
+  background-color: #333;
+  }
+  
+  .ConfirmSuppr h1 {
+  color: red;
+  text-decoration: underline;
+  }
+  
+  .Supprimer {
+  background-color: red;
+  color: black;
+  height: 50px;
+  padding-left: 1%;
+  padding-right: 1%;
+  }
+  
+  .Retourprofil {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffbb00;
+  color: black;
+  border: black solid 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1em;
+  }
+  
+  /* Mentions légales et CGU /
+  / Titre de la page */
+  .legal-box h1 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
-}
-
-/* Titres des sections */
-.legal-box h2 {
+  }
+  
+  /* Titres des sections */
+  .legal-box h2 {
   font-size: 24px;
   margin-top: 50px;
   margin-bottom: 20px;
   color: red;
   text-align: center;
-}
-
-.legal-box h3 {
+  }
+  
+  .legal-box h3 {
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 10px;
-}
-
-/* Contenu des sections */
-.legal-box p {
+  }
+  
+  /* Contenu des sections */
+  .legal-box p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
-}
-
-/* Liens hypertextes */
-.legal-box a {
+  }
+  
+  /* Liens hypertextes */
+  .legal-box a {
   color: #0072c6;
   text-decoration: none;
-}
-
-.legal-box a:hover {
+  }
+  
+  .legal-box a:hover {
   text-decoration: underline;
-}
-
-/* Encadré pour les CGU et les mentions légales */
-.legal-box {
+  }
+  
+  /* Encadré pour les CGU et les mentions légales */
+  .legal-box {
   border: 1px solid #ddd;
   padding: 20px;
-}
-.legal-box 
-.legal-box h2 {
+  }
+  
+  .legal-box .legal-box h2 {
   font-size: 24px;
-}
-
-.legal-box h3 {
+  }
+  
+  .legal-box h3 {
   font-size: 18px;
-}
-
-.legal-box p {
+  }
+  
+  .legal-box p {
   font-size: 16px;
   line-height: 1.5;
-}
-
-.tout {
-  /* text-align: center; */
+  }
+  
+  .tout {
   width: 800px;
   margin: 0 auto;
   padding-top: 2em;
-}
+  background-color: #ddd;
+  }
 
 
 /* Page Login */
-
-
-
 .h1-Login {
   font-size: 36px;
   margin-bottom: 20px;
@@ -945,24 +860,26 @@ width: 100%;
 /* Styles pour la classe article_accueil */
 .article_accueil {
   color: #333;
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 10px;
 }
 
 /* Styles pour la classe pseudo_accueil */
 .pseudo_accueil {
-  color: #666;
+  color: #ddd;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 /* Styles pour la classe date_accueil */
 .date_accueil {
-  color: #666;
+  color: #ddd;
   font-size: 14px;
   margin-bottom: 5px;
-  text-align: right; /* Alignement à droite */
+  text-align: right;
+  /* Alignement à droite */
 }
+
 /* Styles pour la classe author_info */
 .author_info {
   display: flex;
@@ -974,7 +891,7 @@ width: 100%;
 }
 
 .author_info .date_accueil {
-  color: #666;
+  color: #ddd;
   font-size: 14px;
   margin-left: auto;
   justify-content: flex-end;
@@ -1000,16 +917,6 @@ width: 100%;
   cursor: pointer;
 }
 
-/* Styles pour la classe pagination-link */
-.pagination-link {
-  color: #333;
-  text-decoration: none;
-  margin-right: 5px;
-}
-
-.pagination-link:hover {
-  text-decoration: underline;
-}
 /* Styles pour la classe link-style */
 .link-style {
   display: inline-block;
@@ -1027,7 +934,7 @@ width: 100%;
 /* Styles pour la classe main-container */
 .main-container {
   border: 2px solid black;
-  margin-top: 10%;
+  margin-top: 2%;
   margin-inline: 25%;
   text-align: center;
   font-size: x-large;
@@ -1083,54 +990,89 @@ width: 100%;
   text-decoration: underline;
 }
 
-
-
 /* Page SUJET */
 /* Styles pour la classe bclSujet */
 .bclSujet {
   background-color: #333;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid black;
   padding: 10px;
+
 }
 
 /* Styles pour la classe articleSujet */
 .articleSujet {
-  color: #333;
-  font-size: 18px;
+  color: #ffbb00;
+  font-size: 30px;
   margin-top: 10px;
+  text-align: center;
 }
 
 /* Styles pour la classe pseudoSujet */
 .pseudoSujet {
-  color: #666;
-  font-size: 14px;
+  color: #7183bb;
+  font-size: 24px;
   margin-bottom: 5px;
+  /* text-align: right; */
 }
 
 /* Styles pour la classe dateSujet */
 .dateSujet {
-  color: #666;
+  color: #ffbb00;
   font-size: 14px;
   margin-bottom: 5px;
-  text-align: right; /* Alignement à droite */
+  text-align: right;
+  /* Alignement à droite */
 }
 
 /* Styles pour la classe supprimerCommentaire */
 .supprimerCommentaire {
-  background-color: #ff0000;
-  color: black;
-  border: #000000 solid 2px;
+  background-color: green;
+  color: red;
+  border: 2px solid #000000;
   padding: 5px 10px;
   font-size: 14px;
   cursor: pointer;
 }
 
+/* Styles pour la classe bclSujet */
+.bclComm {
+  background-color: #333;
+  /* border: 1px solid white; */
+  padding: 10px;
+
+}
+
+/* Styles pour la classe articleSujet */
+.articleComm {
+  color: #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Styles pour la classe pseudoSujet */
+.pseudoComm {
+  color: #7183bb;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Styles pour la classe dateComm */
+.dateComm {
+  color: #ffbb00;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: right;
+  /* Alignement à droite */
+}
+
 
 /* Styles pour la classe pagination-link */
 .pagination-link {
-  color: #333;
+  color: #ffbb00;
   text-decoration: none;
   margin-right: 5px;
+  font-size: 24px;
+
 }
 
 .pagination-link:hover {
@@ -1139,9 +1081,11 @@ width: 100%;
 
 /* Styles pour la classe current-page */
 .current-page {
-  color: #333;
+  color: #ddd;
+  font-size: 24px;
   text-decoration: underline;
 }
+
 .textSujet {
   background-color: #555;
   color: #fff;
@@ -1149,8 +1093,10 @@ width: 100%;
   height: 150px;
   border: none;
   padding: 5px;
-  margin: 0 auto 10px; /* Centrer horizontalement avec une marge en bas */
-  display: block; /* Pour centrer le texte */
+  margin: 0 auto 10px;
+  /* Centrer horizontalement avec une marge en bas */
+  display: block;
+  /* Pour centrer le texte */
 
   /* Ajout des styles de centrage vertical */
   display: flex;
@@ -1166,12 +1112,21 @@ width: 100%;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  display: block; /* Pour centrer le bouton */
-  margin: 0 auto; /* Centrer horizontalement */
+  display: block;
+  /* Pour centrer le bouton */
+  margin: 0 auto;
+  /* Centrer horizontalement */
 }
 
+/* Styles pour la classe pagination-container */
+.pagination-container {
+  text-align: right;
+  margin-top: 10px;
+}
 
-
+.bclComm hr {
+  color: #ffbb00;
+}
 
 
 
@@ -1277,6 +1232,11 @@ width: 100%;
 
 
 
+@media (max-width: 770px) {
+  .character_Home {
+    margin-bottom: 0;
+  }
+}
 
 
 

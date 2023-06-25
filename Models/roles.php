@@ -1,10 +1,8 @@
 <?php
 
-
 class Roles extends Database{
-    private $ID_role;
-    private $Nom_role;
-   
+    private $ID_role; // Identifiant du rôle
+    private $Nom_role; // Nom du rôle
 
     public function getID_role()
     {

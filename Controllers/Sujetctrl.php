@@ -1,4 +1,5 @@
 <?php
+// Vérification de la session de l'utilisateur
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -7,6 +8,7 @@ $commentaire = new Sujets();
 $numberPage = $commentaire->numberPage();
 $numberDePage = ceil($numberPage["nbPage"]);
 
+// Vérification de la présence du paramètre "Sujet" dans l'URL
 if (isset($_GET["Sujet"]) && !empty($_GET["Sujet"])) {
     $currentPage = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
     $commentaire->setID_sujet($_GET["Sujet"]);
@@ -20,16 +22,23 @@ $commentaire->setOffset($offset);
 
 $monArticle = $commentaire->sujetsId();
 
+// Ajout d'un commentaire
 if (isset($_POST["ajoutComm"])) {
-    $commentaire->setContenu_commentaire($_POST["commentaire"]);
-    $commentaire->setID_utilisateur(isset($_SESSION["ID_utilisateur"]) ? $_SESSION["ID_utilisateur"] : null);
-    $commentaire->setID_sujet($_GET["Sujet"]);
-    $commentaire->AjouterCommentaire();
+    if (isset($_SESSION["ID_utilisateur"])) {
+        $commentaire->setContenu_commentaire($_POST["commentaire"]);
+        $commentaire->setID_utilisateur($_SESSION["ID_utilisateur"]);
+        $commentaire->setID_sujet($_GET["Sujet"]);
+        $commentaire->AjouterCommentaire();
 
-    header("Location: index.php?Sujet=" . $_GET["Sujet"]);
-    exit();
+        header("Location: index.php?Sujet=" . $_GET["Sujet"]);
+        exit();
+    } else {
+        header("Location: index.php?Connexion");
+        exit();
+    }
 }
 
+// Suppression d'un commentaire
 if (isset($_POST["supprimer_commentaire"])) {
     $commentaireID = $_POST["commentaireID"];
     $suppressionReussie = $commentaire->supprimerCommentaire($commentaireID);
@@ -41,5 +50,6 @@ if (isset($_POST["supprimer_commentaire"])) {
     }
 }
 
+// Récupération des commentaires pour le sujet donné, avec une limite et un offset
 $commentaires = $commentaire->getCommentairesLimit($limit, $offset, $_GET['Sujet']);
 ?>

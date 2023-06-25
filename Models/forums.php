@@ -1,10 +1,8 @@
 <?php
 
-
 class Forums extends Database{
-    private $ID_forum;
-    private $Nom_forum;
-   
+    private $ID_forum; // Identifiant du forum
+    private $Nom_forum; // Nom du forum
 
     public function getID_forum()
     {

@@ -7,6 +7,7 @@
     <section class="Cartes">
         <div class="maps">
             <?php
+            // Définition du tableau des cartes avec leurs noms et images correspondantes
             $cartes = array(
                 "Ayutthaya" => "image/Cartes/Ayutthaya/ayutthaya-screenshot-003.jpeg",
                 "Blizzard World" => "image/Cartes/Blizzard World/blizzardworld-screenshot-003.jpeg",
@@ -46,11 +47,12 @@
                 "Tour de Lijiang" => "image/Cartes/Tour de Lijiang/Lijiang_Tower_loading_screen.webp",
                 "Usine Volskaya" => "image/Cartes/Usine Volskaya/volskaya-industries-4.jpg",
             );
-
+            // Parcourir chaque carte et afficher son lien et son nom
             foreach ($cartes as $nom => $image) {
+                // Formater le nom de la carte pour l'utiliser dans le lien
                 $nom_formatte = str_replace(" ", "_", $nom);
                 $lien = "Index.php?" . $nom_formatte . "#";
-
+                // Afficher le lien de la carte avec son image et son nom
                 echo '
                 <div>
                     <a class="link_maps" href="' . $lien . '">

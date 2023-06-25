@@ -1,10 +1,9 @@
 <?php
-session_start();
-include_once("Models/Database.php");
-include_once("Models/Constantes.php");
-include("Models/Utilisateurs.php");
-include("Models/sujets.php")
-
+session_start(); // Démarre la session PHP
+include_once("Models/Database.php"); // Inclut le fichier Database.php
+include_once("Models/Constantes.php"); // Inclut le fichier Constantes.php
+include("Models/Utilisateurs.php"); // Inclut le fichier Utilisateurs.php
+include("Models/sujets.php"); // Inclut le fichier sujets.php
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,16 +20,6 @@ include("Models/sujets.php")
 </head>
 
 <body>
-  <!-- Navbar -->
-  <!-- <nav id="nav">
-    <ul class="ul_nav">
-      <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
-      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Héros#">Héros</a></li>
-      <li><a class="Navigation" href="http://localhost/PHP/Evaluation/Index.php?Cartes#">Cartes</a></li>
-      <li><a class="Navigation" href="#">Forums</a></li>
-      <li class="Btnconnexion"><a href="#">Se connecter</a></li>
-    </ul>
-  </nav> -->
 
   <!-- Navbar -->
   <nav id="nav">
@@ -39,72 +28,64 @@ include("Models/sujets.php")
       <li><a class="Navigation" href="Index.php?Héros#">Héros</a></li>
       <li><a class="Navigation" href="Index.php?Cartes#">Cartes</a></li>
       <li><a class="Navigation" href="Index.php?Forums#">Forums</a></li>
+      <li><a class="Navigation" href="Index.php?Profil#">Profil</a></li>
       <li id="loginLi" class="Btnconnexion"><a href="Index.php?Connexion#" id="loginButton">Se connecter</a></li>
     </ul>
   </nav>
 
-
-
-
-
-
   <?php
-
+  // Vérifie les paramètres GET pour inclure les fichiers correspondants
   if (isset($_GET["Héros"])) {
-    // include_once("Controllers/ctrl_Héros.php");
-    include_once("Views/Héros.php");
+    include_once("Views/Héros.php"); // Inclut le fichier Héros.php
   } elseif (isset($_GET["Ashe"])) {
-    include_once("views/Ashe.php");
+    include_once("views/Ashe.php"); // Inclut le fichier Ashe.php
+  } elseif (isset($_GET["Ana"])) {
+    include_once("views/Ana.php"); // Inclut le fichier Ana.php
   } elseif (isset($_GET["Cartes"])) {
-    include_once("views/Cartes.php");
+    include_once("views/Cartes.php"); // Inclut le fichier Cartes.php
   } elseif (isset($_GET["Népal"])) {
-    include_once("views/Népal.php");
+    include_once("views/Népal.php"); // Inclut le fichier Népal.php
     // } elseif (isset($_GET["Test"])) {
     //   include_once("controllers/Connexionctrl.php");
     //   include_once("views/Test.php");
   } else if (isset($_GET["Inscription"])) {
-    include_once("controllers/Inscriptionctrl.php");
-    include_once("views/IndexInscription.php");
+    include_once("controllers/Inscriptionctrl.php"); // Inclut le fichier Inscriptionctrl.php
+    include_once("views/IndexInscription.php"); // Inclut le fichier IndexInscription.php
   } else if (isset($_GET["Connexion"])) {
-    include_once("controllers/Connexionctrl.php");
-    include_once("views/IndexConnexion.php");
+    include_once("controllers/Connexionctrl.php"); // Inclut le fichier Connexionctrl.php
+    include_once("views/IndexConnexion.php"); // Inclut le fichier IndexConnexion.php
   } else if (isset($_GET["Profil"])) {
-    include_once("controllers/Profilctrl.php");
-    include_once("views/Profil.php");
+    include_once("controllers/Profilctrl.php"); // Inclut le fichier Profilctrl.php
+    include_once("views/Profil.php"); // Inclut le fichier Profil.php
   } else if (isset($_GET["Modification"])) {
-    include_once("controllers/Modificationctrl.php");
-    include_once("views/IndexModification.php");
+    include_once("controllers/Modificationctrl.php"); // Inclut le fichier Modificationctrl.php
+    include_once("views/IndexModification.php"); // Inclut le fichier IndexModification.php
   } else if (isset($_GET["Suppression"])) {
-    include_once("controllers/Confirmationsuppctrl.php");
-    include_once("views/IndexSuppression.php");
+    include_once("controllers/Confirmationsuppctrl.php"); // Inclut le fichier Confirmationsuppctrl.php
+    include_once("views/IndexSuppression.php"); // Inclut le fichier IndexSuppression.php
   } else if (isset($_GET["Forums"])) {
-    include_once("controllers/Forumsctrl.php");
-    include_once("views/Forums.php");
+    include_once("controllers/Forumsctrl.php"); // Inclut le fichier Forumsctrl.php
+    include_once("views/Forums.php"); // Inclut le fichier Forums.php
   } else if (isset($_GET["NouveauSujet"])) {
-    include_once("controllers/NouveauSujetctrl.php");
-    include_once("views/NouveauSujet.php");
+    include_once("controllers/NouveauSujetctrl.php"); // Inclut le fichier NouveauSujetctrl.php
+    include_once("views/NouveauSujet.php"); // Inclut le fichier NouveauSujet.php
   } else if (isset($_GET["Sujet"])) {
-    include_once("controllers/Sujetctrl.php");
-    include_once("views/Sujet.php");
+    include_once("controllers/Sujetctrl.php"); // Inclut le fichier Sujetctrl.php
+    include_once("views/Sujet.php"); // Inclut le fichier Sujet.php
   } else if (isset($_GET["MentionsLégales"])) {
-    include_once("views/Mentions_Légales_CGU.php");
+    include_once("views/Mentions_Légales_CGU.php"); // Inclut le fichier Mentions_Légales_CGU.php
   }
-
-
   ?>
 
   <!-- Banniere bas de page -->
   <section>
     <div>
       <img class="header-image img-fluid" src="image/thumb_4905_post_big.jpg" alt="Ow-">
-
     </div>
-
   </section>
 
   <!-- Création Footer -->
   <footer class="container-fluid">
-
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -116,12 +97,10 @@ include("Models/sujets.php")
         <div class="col-lg-4 col-md-6 col-sm-12 classLienFooter">
           <h3 class="liensutiles">Liens utiles</h3>
           <ul>
-
             <li><a class="a_footer" href="index.php?Héros">Héros</a></li>
             <li><a class="a_footer" href="index.php?Cartes">Cartes</a></li>
             <li><a class="a_footer" href="index.php?Forums">Forums</a></li>
             <li><a class="a_footer" href="index.php?MentionsLégales">Mentions Légales</a></li>
-
           </ul>
         </div>
       </div>
@@ -146,7 +125,6 @@ include("Models/sujets.php")
         </div>
       </div>
     </div>
-
   </footer>
 
   <a href="#" class="back-to-top">

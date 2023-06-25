@@ -1,3 +1,5 @@
+<!-- Formulaire d'Inscription -->
+
 <body class="body Login">
     <div class="image-text">
         <img class="img_background" src="image/banniere (1).png">
@@ -8,6 +10,7 @@
             <label for="username" class="label-Login">Adresse Email :</label>
             <input type="text" name="email" placeholder="Votre adresse email" class="input-Login">
             <?php
+            // Affichage de l'erreur liée à l'email, si elle existe
             if (isset($error["email"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["email"]; ?></p>
@@ -17,6 +20,7 @@
             <label for="password" class="label-Login">Mot de passe :</label>
             <input type="password" name="MotDepasse" placeholder="Votre mot de passe" class="input-Login">
             <?php
+            // Affichage de l'erreur liée au mot de passe, si elle existe
             if (isset($error["MotDepasse"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["MotDepasse"]; ?></p>
@@ -26,6 +30,7 @@
             <label for="pseudo" class="label-Login">Pseudo :</label>
             <input type="text" name="pseudo" placeholder="Votre Pseudo" class="input-Login">
             <?php
+            // Affichage de l'erreur liée au pseudo, si elle existe
             if (isset($error["pseudo"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
                     <p><?php echo $error["pseudo"]; ?></p>
@@ -36,3 +41,4 @@
             <input type="submit" name="seconnecter" value="Se connecter" class="submit-Login">
         </form>
     </div>
+</body>

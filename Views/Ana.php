@@ -2,15 +2,17 @@
     <!-- Présentation -->
     <section class="présentation">
         <div class="image-text">
-            <img class="img_background" src="image/1600_Ana.jpg" alt="Ana">
-            <div class="overlay">
-                <h1>Ana</h1>
-                <p>Membre fondateur d’Overwatch, Ana met son talent et son expertise au service de la défense de sa patrie et de ses proches.</p>
-                <div class="icones">
-                    <img src="image/picto_-coval-180_pxl.jpg">
-                    <p>Soutien</p>
-                    <img src="image/227.jpg">
-                    <p>Le Caire, Égypte</p>
+            <div class="img_container">
+                <img class="img_background" src="image/1600_Ana.jpg" alt="Ana">
+                <div class="overlay">
+                    <h1>Ana</h1>
+                    <p>Membre fondateur d’Overwatch, Ana met son talent et son expertise au service de la défense de sa patrie et de ses proches.</p>
+                    <div class="icones">
+                        <img src="image/picto_-coval-180_pxl.jpg">
+                        <p>Soutien</p>
+                        <img src="image/227.jpg">
+                        <p>Le Caire, Égypte</p>
+                    </div>
                 </div>
             </div>
         </div>

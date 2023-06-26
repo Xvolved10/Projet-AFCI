@@ -2,15 +2,17 @@
     <!-- Présentation -->
     <section class="présentation">
         <div class="image-text">
-            <img class="img_background" src="image/1920_Ashe.jpg" alt="Ashe">
-            <div class="overlay">
-                <h1>Ashe</h1>
-                <p>Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</p>
-                <div class="icones">
-                    <img src="image/1563473137_837161.png">
-                    <p>Dégats</p>
-                    <img src="image/227.jpg">
-                    <p>Gorge Deadlock, Arizona, États-Unis</p>
+            <div class="img_container">
+                <img class="img_background" src="image/1920_Ashe.jpg" alt="Ashe">
+                <div class="overlay">
+                    <h1>Ashe</h1>
+                    <p>Calculatrice, ambitieuse et respectée dans le milieu de la pègre, Ashe est la cheffe du gang Deadlock Rebels.</p>
+                    <div class="icones">
+                        <img src="image/1563473137_837161.png">
+                        <p>Dégats</p>
+                        <img src="image/227.jpg">
+                        <p>Gorge Deadlock, Arizona, États-Unis</p>
+                    </div>
                 </div>
             </div>
         </div>

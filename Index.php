@@ -23,8 +23,8 @@ include("Models/sujets.php"); // Inclut le fichier sujets.php
 
   <!-- Navbar -->
   <nav id="nav">
-    <ul class="ul_nav">
-      <li class="logoBanniere"><a class="logo_link" href="#"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
+    <ul class="ul_nav "">
+      <li class=" logoBanniere"><a class="logo_link" href="#" id="logo"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="Index.php?Héros#">Héros</a></li>
       <li><a class="Navigation" href="Index.php?Cartes#">Cartes</a></li>
       <li><a class="Navigation" href="Index.php?Forums#">Forums</a></li>
@@ -32,7 +32,29 @@ include("Models/sujets.php"); // Inclut le fichier sujets.php
       <li id="loginLi" class="Btnconnexion"><a href="Index.php?Connexion#" id="loginButton">Se connecter</a></li>
     </ul>
   </nav>
-
+  <!-- Navbar Bootstrap <900px-->
+  <div class="nav900">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <a class="nav-link" href="Index.php?Héros#">Héros</a>
+        <br>
+        <a class="nav-link" href="Index.php?Cartes#">Cartes</a>
+        <br>
+        <a class="nav-link" href="Index.php?Forums#">Forums</a>
+        <br>
+        <a class="nav-link" href="Index.php?Profil#">Profil</a></a>
+        <br>
+        <a class="nav-link" href="Index.php?Connexion#">Connexion</a>
+      </div>
+    </div>
+  </div>
   <?php
   // Vérifie les paramètres GET pour inclure les fichiers correspondants
   if (isset($_GET["Héros"])) {

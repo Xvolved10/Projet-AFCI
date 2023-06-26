@@ -3,6 +3,7 @@
     <!-- Présentation -->
     <section class="présentation">
         <div class="image-text">
+        <div class="img_container">
             <img class="img_background" src="image/Cartes/Népal/thiago-klafke-screenshot-16-12-23-10-54-34-000.jpg" alt="Népal">
             <div class="overlay">
                 <h1>Népal</h1>
@@ -11,6 +12,7 @@
                     <p>Monastère, Népal, Himalaya</p>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- Textes -->

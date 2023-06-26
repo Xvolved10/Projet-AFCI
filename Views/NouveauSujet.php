@@ -1,7 +1,7 @@
 <body class="body formnouveausujet">
   <!-- Image du forum -->
   <div class="image-forum">
-    <img class="img_background" src="image/banniere (1).png">
+    <img class="img_background" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
   </div>
 
   <!-- Conteneur principal -->
@@ -10,7 +10,7 @@
     <form action="" method="post">
       <h1 class="form-title">Créez un nouveau sujet</h1>
       <?php if (isset($error["Titre_sujet"])) { ?>
-        <p class="form-error"><?php echo $error["Titre_sujet"]; ?></p>
+        <p class="form-error"><?php echo htmlspecialchars($error["Titre_sujet"]); ?></p>
       <?php } ?>
       <textarea name="Titre_sujet" value="" class="form-textarea"></textarea>
       <br><br>

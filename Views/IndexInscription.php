@@ -2,7 +2,7 @@
 
 <body class="body Login">
     <div class="image-text">
-        <img class="img_background" src="image/banniere (1).png">
+        <img class="img_background" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
     </div>
     <div class="container div-Login">
         <h1 class="h1-Login">Inscription</h1>
@@ -13,7 +13,7 @@
             // Affichage de l'erreur liée à l'email, si elle existe
             if (isset($error["email"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
-                    <p><?php echo $error["email"]; ?></p>
+                    <p><?php echo htmlspecialchars($error["email"]); ?></p>
                 </div>
             <?php } ?><br><br>
 
@@ -23,7 +23,7 @@
             // Affichage de l'erreur liée au mot de passe, si elle existe
             if (isset($error["MotDepasse"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
-                    <p><?php echo $error["MotDepasse"]; ?></p>
+                    <p><?php echo htmlspecialchars($error["MotDepasse"]); ?></p>
                 </div>
             <?php } ?><br><br>
 
@@ -33,7 +33,7 @@
             // Affichage de l'erreur liée au pseudo, si elle existe
             if (isset($error["pseudo"])) { ?>
                 <div class="alert alert-danger alert-Login" role="alert">
-                    <p><?php echo $error["pseudo"]; ?></p>
+                    <p><?php echo htmlspecialchars($error["pseudo"]); ?></p>
                 </div>
             <?php } ?>
 

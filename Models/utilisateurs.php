@@ -1,4 +1,6 @@
-<?
+<?php
+
+
 class Utilisateurs extends Database
 {
     private $ID_utilisateur; // Identifiant de l'utilisateur

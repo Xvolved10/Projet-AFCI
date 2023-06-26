@@ -50,9 +50,6 @@ accordionButtons.forEach((button) => {
 
 
 
-
-
-
 // JS Arrow To Top
 window.addEventListener('scroll', function() {
   var backToTopButton = document.querySelector('.back-to-top');
@@ -63,9 +60,6 @@ window.addEventListener('scroll', function() {
       backToTopButton.classList.remove('show');
   }
 });
-
-
-
 
 
 
@@ -103,18 +97,18 @@ imageZoomOverlay.addEventListener('click', function() {
 });
 
 
-// JS Bouton Se Connecter -> Profil
-function modifierBouton() {
-  var bouton = document.getElementById("loginButton");
-  bouton.innerHTML = "Profil";
-  bouton.href = "http://localhost/PHP/Evaluation/Index.php?Profil";
-}
+// // JS Bouton Se Connecter -> Profil
+// function modifierBouton() {
+//   var bouton = document.getElementById("loginButton");
+//   bouton.innerHTML = "Profil";
+//   bouton.href = "http://localhost/PHP/Evaluation/Index.php?Profil";
+// }
 
-function restaurerBouton() {
-  var bouton = document.getElementById("loginButton");
-  bouton.innerHTML = "Se connecter";
-  bouton.href = "http://localhost/PHP/Evaluation/Index.php?Connexion";
-}
+// function restaurerBouton() {
+//   var bouton = document.getElementById("loginButton");
+//   bouton.innerHTML = "Se connecter";
+//   bouton.href = "http://localhost/PHP/Evaluation/Index.php?Connexion";
+// }
 
 
 

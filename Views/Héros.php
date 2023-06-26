@@ -35,7 +35,6 @@
       </a>
     </div>
   </section>
-
   <!-- <div class="container-fluid column">
     <div class="btn-group" role="group" aria-label="Basic  example">
       <button type="button" class="btn">Tout</button>

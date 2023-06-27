@@ -2,7 +2,7 @@
 
 <body class="body Login">
     <div class="image-text">
-        <img class="img_background" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
+        <img class="img-profil" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
     </div>
     <div class="container div-Login">
         <h1 class="h1-Login">Connexion</h1>

@@ -96,6 +96,8 @@ include("Models/sujets.php"); // Inclut le fichier sujets.php
     include_once("views/Sujet.php"); // Inclut le fichier Sujet.php
   } else if (isset($_GET["MentionsLégales"])) {
     include_once("views/Mentions_Légales_CGU.php"); // Inclut le fichier Mentions_Légales_CGU.php
+  } else{
+    include_once("Views/Héros.php"); // Inclut le fichier Héros.php
   }
   ?>
 

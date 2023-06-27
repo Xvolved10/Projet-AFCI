@@ -2,7 +2,7 @@
 
 <body class="body">
     <div class="image-text">
-        <img class="img_background" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
+        <img class="img-profil" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
     </div>
     <div class="ConfirmSuppr">
         <h1>Êtes-vous sûr de vouloir supprimer votre profil ?</h1>

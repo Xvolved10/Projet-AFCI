@@ -1,7 +1,7 @@
 <body class="body formnouveausujet">
   <!-- Image du forum -->
   <div class="image-forum">
-    <img class="img_background" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
+    <img class="img-profil" src="<?php echo htmlspecialchars("image/banniere (1).png"); ?>">
   </div>
 
   <!-- Conteneur principal -->

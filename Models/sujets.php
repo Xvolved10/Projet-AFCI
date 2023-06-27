@@ -13,11 +13,11 @@ class Sujets extends Database
     private $Date_publication; // Date de publication du commentaire
     private $pseudo; // Pseudo de l'utilisateur
 
-    public function getID_sujet()
+    public function getID_sujet()   // Méthodes d'accès (getters) pour récupérer les valeurs des propriétés   
     {
         return $this->ID_sujet;
     }
-    public function setID_sujet($ID_sujet)
+    public function setID_sujet($ID_sujet)  // Méthodes de modification (setters) pour définir les valeurs des propriétés
     {
         return $this->ID_sujet = $ID_sujet;
     }
@@ -109,7 +109,7 @@ class Sujets extends Database
         $insert->bindValue(2, $this->ID_utilisateur, PDO::PARAM_INT);
         $insert->execute();
     }
-    
+
     public function affichage()
     {
         // Récupérer les sujets avec les informations de l'utilisateur correspondant
@@ -122,14 +122,14 @@ class Sujets extends Database
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
     public function numberPage()
     {
         // Récupérer le nombre de pages pour la pagination
         $requete = $this->pdo->query("SELECT COUNT(ID_sujet)/8 nbPage FROM sujets");
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
-    
+
     public function sujetsId()
     {
         // Récupérer les informations d'un sujet spécifique avec les informations de l'utilisateur correspondant
@@ -141,7 +141,7 @@ class Sujets extends Database
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
-    
+
     public function AjouterCommentaire()
     {
         // Ajouter un nouveau commentaire dans la table "commentaires"
@@ -151,7 +151,7 @@ class Sujets extends Database
         $insComm->bindValue(3, $this->ID_sujet, PDO::PARAM_INT);
         $insComm->execute();
     }
-    
+
     public function getCommentaires()
     {
         // Récupérer les commentaires d'un sujet spécifique avec les informations de l'utilisateur correspondant
@@ -164,7 +164,7 @@ class Sujets extends Database
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
     public function getCommentairesLimit($limit, $offset, $ID_sujet)
     {
         // Récupérer un nombre limité de commentaires d'un sujet spécifique avec les informations de l'utilisateur correspondant
@@ -174,28 +174,28 @@ class Sujets extends Database
                                        WHERE commentaires.ID_sujet = :ID_sujet
                                        ORDER BY commentaires.Date_publication ASC
                                        LIMIT :limit OFFSET :offset");
-    
+
         $requete->bindValue(':ID_sujet', $ID_sujet, PDO::PARAM_INT);
         $requete->bindValue(':limit', $limit, PDO::PARAM_INT);
         $requete->bindValue(':offset', $offset, PDO::PARAM_INT);
         $requete->execute();
-    
+
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
     public function supprimerSujetEtCommentaires()
     {
         // Supprimer les commentaires du sujet
         $supprimerCommentaires = $this->pdo->prepare("DELETE FROM commentaires WHERE ID_sujet = ?");
         $supprimerCommentaires->bindValue(1, $this->ID_sujet, PDO::PARAM_INT);
         $supprimerCommentaires->execute();
-    
+
         // Supprimer le sujet
         $supprimerSujet = $this->pdo->prepare("DELETE FROM sujets WHERE ID_sujet = ?");
         $supprimerSujet->bindValue(1, $this->ID_sujet, PDO::PARAM_INT);
         $supprimerSujet->execute();
     }
-    
+
     public function getCommentaireByID($commentaireID)
     {
         // Récupérer les informations d'un commentaire spécifique
@@ -204,14 +204,14 @@ class Sujets extends Database
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
-    
+
     public function supprimerCommentaire($commentaireID)
     {
         // Supprimer un commentaire spécifique
         $requete = $this->pdo->prepare("DELETE FROM commentaires WHERE ID_commentaire = ?");
         $requete->bindValue(1, $commentaireID, PDO::PARAM_INT);
         $requete->execute();
-    
+
         return true;
     }
 }

@@ -10,12 +10,12 @@ class Utilisateurs extends Database
     private $Date_d_inscription; // Date d'inscription de l'utilisateur
     private $ID_role; // Identifiant du rôle de l'utilisateur
     private $avatar; // Avatar de l'utilisateur
-
-    public function getID_utilisateur()
+    
+    public function getID_utilisateur()     // Méthodes d'accès (getters) pour récupérer les valeurs des propriétés
     {
         return $this->ID_utilisateur;
     }
-    public function setID_utilisateur($ID_utilisateur)
+    public function setID_utilisateur($ID_utilisateur)     // Méthodes de modification (setters) pour définir les valeurs des propriétés
     {
         return $this->ID_utilisateur = $ID_utilisateur;
     }
@@ -64,6 +64,7 @@ class Utilisateurs extends Database
     {
         return $this->ID_role = $ID_role;
     }
+
     public function getAvatar()
     {
         return $this->avatar;

@@ -1,7 +1,5 @@
 <body class="body">
 
-
-
   <section>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicateurs -->
@@ -47,8 +45,8 @@
   </div> -->
 
   <!-- Section Personnage -->
-  <section>
-    <div class="container-fluid">
+  <section class="character-section">
+    <div class="container-fluid Home">
       <div class="row character_Home">
         <!-- Début de la boucle -->
         <?php
@@ -96,7 +94,7 @@
           $image = $character[1];
           $type = $character[2];
         ?>
-          <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="col-sm-12 col-md-6 col-lg-6 héros-home">
             <div class="character" data-type="<?php echo $type; ?>">
               <a href="http://localhost/PHP/Evaluation/Index.php?<?php echo $name; ?>#">
                 <div class="image-container">

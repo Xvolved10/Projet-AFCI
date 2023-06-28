@@ -22,17 +22,13 @@
                     <div>
                         <?php
                         // Vérifie si l'utilisateur est connecté et s'il a le droit de supprimer le commentaire
-                        if (isset($_SESSION["ID_utilisateur"]) && !empty($_SESSION["ID_utilisateur"])) {
-                            if (isset($_SESSION["ID_utilisateur"], $comment['ID_utilisateur']) && isset($_SESSION["ID_role"]) && ($_SESSION["ID_utilisateur"] == $comment['ID_utilisateur'] || $_SESSION["ID_role"] == 1)) {
-                        ?>
+                        // if (isset($_SESSION["ID_utilisateur"]) && !empty($_SESSION["ID_utilisateur"])) {
+                        //     if (isset($_SESSION["ID_utilisateur"], $comment['ID_utilisateur']) && isset($_SESSION["ID_role"]) && ($_SESSION["ID_utilisateur"] == $comment['ID_utilisateur'] || $_SESSION["ID_role"] == 1)) {
+                        // ?>
                                 <form method="post">
                                     <input type="hidden" name="commentaireID" value="<?php echo htmlspecialchars($comment['ID_commentaire']); ?>">
                                     <button type="submit" name="supprimer_commentaire" class="supprimerCommentaire">Supprimer</button>
                                 </form>
-                        <?php
-                            }
-                        }
-                        ?>
                     </div>
                     <hr>
             <?php }

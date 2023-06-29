@@ -84,10 +84,9 @@ body strong {
 }
 
 /* Style de la barre de navigation au survol */
-nav:hover {
+#nav:hover {
   opacity: 1.0;
 }
-
 /* Style de la liste non ordonnée dans la barre de navigation */
 .ul_nav {
   display: flex;
@@ -151,6 +150,7 @@ nav a {
   background-color: #5AA8B9;
   color: #141414;
   border: solid black 1px;
+  opacity: 1.0;
 }
 
 /* Style de la bannière */
@@ -1044,10 +1044,10 @@ body .ytb {
 
 /* Styles pour la classe pseudoSujet */
 .pseudoSujet {
-  color: #0072c6;
+  color: #ffbb00;
   font-size: 24px;
   margin-bottom: 5px;
-  text-decoration: underline #0072c6;
+  text-decoration: underline #ffbb00;
 }
 
 /* Styles pour la classe dateSujet */
@@ -1062,13 +1062,12 @@ body .ytb {
 
 /* Styles pour la classe supprimerCommentaire */
 .supprimerCommentaire {
-  background-color: green;
-  color: red;
-  border: 2px solid #000000;
+  background-color: #ff0000;
+  color: black;
+  border: #000000 solid 2px;
   padding: 5px 10px;
   font-size: 14px;
-  cursor: pointer;
-}
+  cursor: pointer;}
 
 /* Styles pour la classe bclSujet */
 .bclComm {
@@ -1085,7 +1084,7 @@ body .ytb {
 
 /* Styles pour la classe pseudoSujet */
 .pseudoComm {
-  color: #7183bb;
+  color: #0072c6;
   font-size: 24px;
   margin-bottom: 5px;
 }

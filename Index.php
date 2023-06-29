@@ -17,13 +17,19 @@ include("Models/sujets.php"); // Inclut le fichier sujets.php
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
   <title>Index</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta3/css/bootstrap.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-xxx" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta3/js/bootstrap.min.js" integrity="sha512-xxx" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
   <!-- Navbar -->
   <nav id="nav">
-    <ul class="ul_nav "">
+    <ul class="ul_nav ">
       <li class=" logoBanniere"><a class="logo_link" href="#" id="logo"><img class="Banniere" src="image/Frame 2.png" alt="Logo"></a></li>
       <li><a class="Navigation" href="Index.php?Héros#">Héros</a></li>
       <li><a class="Navigation" href="Index.php?Cartes#">Cartes</a></li>

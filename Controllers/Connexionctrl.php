@@ -43,7 +43,7 @@ if (isset($_POST["Connexion"])) {
                     // Stocke les informations de l'utilisateur dans la session
                     $_SESSION["ID_utilisateur"] = $a["ID_utilisateur"];
                     $_SESSION["email"] = $a["email"];
-                    $_SESSION["MotDepasse"] = $a["MotDepasse"];
+                    // $_SESSION["MotDepasse"] = $a["MotDepasse"];
                     $_SESSION["pseudo"] = $a["pseudo"];
                     $_SESSION["ID_role"] = $a["ID_role"];
                     

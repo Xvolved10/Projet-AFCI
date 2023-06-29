@@ -156,9 +156,26 @@ $(document).ready(function() {
 });
 
 
+// Récupère la référence vers le carousel
+var carousel = document.getElementById('myCarousel');
 
+// Définit l'intervalle de temps entre chaque diapositive en millisecondes
+var interval = 5000; // 5 secondes
 
+// Démarre le défilement automatique
+setInterval(function() {
+  // Récupère l'indice de la diapositive active
+  var activeIndex = Array.from(carousel.querySelectorAll('.carousel-item')).findIndex(function(item) {
+    return item.classList.contains('active');
+  });
 
+  // Calcule l'indice de la prochaine diapositive
+  var nextIndex = (activeIndex + 1) % carousel.querySelectorAll('.carousel-item').length;
+
+  // Active la prochaine diapositive
+  carousel.querySelectorAll('.carousel-item')[nextIndex].classList.add('active');
+  carousel.querySelectorAll('.carousel-item')[activeIndex].classList.remove('active');
+}, interval);
 
 
 

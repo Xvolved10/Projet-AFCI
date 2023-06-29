@@ -165,24 +165,29 @@ class Sujets extends Database
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getCommentairesLimit($limit, $offset, $ID_sujet)
+    public function getCommentairesLimit($limit, $offset, $ID_sujet, $includeUserID = false)
     {
         // Récupérer un nombre limité de commentaires d'un sujet spécifique avec les informations de l'utilisateur correspondant
-        $requete = $this->pdo->prepare("SELECT commentaires.ID_commentaire, commentaires.Contenu_commentaire, commentaires.Date_publication, utilisateurs.pseudo
+        $selectColumns = "commentaires.ID_commentaire, commentaires.Contenu_commentaire, commentaires.Date_publication, utilisateurs.pseudo";
+    
+        if ($includeUserID) {
+            $selectColumns .= ", commentaires.ID_utilisateur";
+        }
+    
+        $requete = $this->pdo->prepare("SELECT $selectColumns
                                        FROM commentaires
                                        INNER JOIN utilisateurs ON commentaires.ID_utilisateur = utilisateurs.ID_utilisateur
                                        WHERE commentaires.ID_sujet = :ID_sujet
                                        ORDER BY commentaires.Date_publication ASC
                                        LIMIT :limit OFFSET :offset");
-
+    
         $requete->bindValue(':ID_sujet', $ID_sujet, PDO::PARAM_INT);
         $requete->bindValue(':limit', $limit, PDO::PARAM_INT);
         $requete->bindValue(':offset', $offset, PDO::PARAM_INT);
         $requete->execute();
-
+    
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-
     public function supprimerSujetEtCommentaires()
     {
         // Supprimer les commentaires du sujet

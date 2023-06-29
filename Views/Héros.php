@@ -1,38 +1,24 @@
 <body class="body">
 
-  <section>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicateurs -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
+<div class="carousel-inner" id="myCarousel">
+  <?php
+  $imageFolder = 'image/carrousel';
 
-      <!-- Contenu des diapositives -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="header-image2 img-fluid" id="image-id" src="image/ow-heroes.png" alt="OW_heroes">
-        </div>
+  // Récupère la liste des fichiers du dossier
+  $images = glob($imageFolder . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 
-        <div class="carousel-item">
-          <img class="header-image2 img-fluid" src="image/thumb_4905_post_big.jpg" alt="OW_heroes">
-        </div>
+  // Parcours la liste des images et les affiche dans le carousel
+  foreach ($images as $index => $image) {
+    $isActive = ($index === 0) ? 'active' : ''; // Ajoute la classe 'active' à la première image
 
-        <div class="carousel-item">
-          <img class="header-image2 img-fluid" src="image/Overwatch-héros-Ashe.jpg" alt="OW_heroes">
-        </div>
-      </div>
+    echo '<div class="carousel-item ' . $isActive . '">';
+    echo '<img src="' . $image . '" class="d-block w-100" alt="">';
+    echo '</div>';
+  }
+  ?>
+</div>
 
-      <!-- Contrôles de navigation -->
-      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-  </section>
+
   <!-- <div class="container-fluid column">
     <div class="btn-group" role="group" aria-label="Basic  example">
       <button type="button" class="btn">Tout</button>

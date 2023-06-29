@@ -19,7 +19,7 @@ if(isset($_SESSION["ID_utilisateur"])){
             $ajoue->setTitre_sujet($Titre_sujet);
             $ajoue->setID_utilisateur($_SESSION["ID_utilisateur"]);
             $ajoue->postsujet();
-            header("Location: index.php?Sujet=" . $value["ID_sujet"]);
+            header("Location: index.php?Forums");
         }
     }
 }
